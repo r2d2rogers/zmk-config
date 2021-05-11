@@ -27,14 +27,14 @@
  * ]
  */
 
-#define BASE 0
+#define DEFAULT 0
 
 #define SPACEDN 1
 #define SPACEUP 2
 #define LOWER 3
 #define RAISE 4
 
-#define KNOWNSPACE 5
+#define REALSPACE 5
 #define ADJUST 6
 #define HYPERSPACE 7
 #define SUBSPACE 8
