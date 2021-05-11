@@ -49,10 +49,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &rgb_ug RGB_TOG &kp N1          &kp N2          &kp N3          &kp N4          &kp N5 &kp N6        &kp N7    &kp N8    &kp N9    &kp N0 &kp BSPC
-   &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans &kp LEFT      &kp DOWN  &kp UP    &kp RIGHT &trans &trans
-   &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans &kp HOME      &kp PG_DN &kp PG_UP &kp END   &trans &trans
-                                                   &trans          &trans          &trans &mo REALSPACE &trans    &kp RALT
+   &rgb_ug RGB_TOG &kp N1          &kp N2          &kp N3          &kp N4          &kp N5 &kp N6   &kp N7    &kp N8        &kp N9    &kp N0 &kp BSPC
+   &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans &kp LEFT &kp DOWN  &kp UP        &kp RIGHT &trans &trans
+   &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans &kp HOME &kp PG_DN &kp PG_UP     &kp END   &trans &trans
+                                                   &reset          &trans          &bootloader     &trans    &mo REALSPACE &trans
                         >;
                 };
                 spaceup_layer {
@@ -62,10 +62,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-    &rgb_ug RGB_TOG &kp N1          &kp N2          &kp N3          &kp N4          &kp N5        &kp N6   &kp N7    &kp N8    &kp N9    &kp N0 &kp BSPC
-    &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans        &kp LEFT &kp DOWN  &kp UP    &kp RIGHT &trans &trans
-    &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans        &kp HOME &kp PG_DN &kp PG_UP &kp END   &trans &trans
-                                                    &trans          &trans          &mo REALSPACE &trans   &trans    &trans
+    &rgb_ug RGB_TOG &kp N1          &kp N2          &kp N3          &kp N4          &kp N5 &kp N6      &kp N7    &kp N8    &kp N9    &kp N0 &kp BSPC
+    &rgb_ug RGB_EFF &rgb_ug RGB_HUI &rgb_ug RGB_SAI &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans &kp LEFT    &kp DOWN  &kp UP    &kp RIGHT &trans &trans
+    &rgb_ug RGB_EFR &rgb_ug RGB_HUD &rgb_ug RGB_SAD &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans &kp HOME    &kp PG_DN &kp PG_UP &kp END   &trans &trans
+                                                    &trans          &mo REALSPACE   &trans &bootloader &trans    &reset
                         >;
                 };
                 lower_layer {
