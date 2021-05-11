@@ -2,50 +2,23 @@
  * Copyright (c) 2020 The ZMK Contributors
  *
  * SPDX-License-Identifier: MIT
- * layers =
- *   [ 
- *     default = [],
- * 
- *     spacedn = [ ],
- *     spaceup = [ ],
- *     lower = [ ],
- *     raise = [ ],
- * 
- *     realspace = [ su sd ],
- *     adjust = [ r l ],
- *     hyperspace = [ su r ],
- *     subspace = [ sd l ],
- *     slipspace = [ sd r ],
- *     foldspace = [ su l ],
- * 
- *     cyberspace = [ rs r ],
- *     knownspace = [ rs l ],
- *     wormhole = [ a su ],
- *     blackhole = [ a sd ],
- * 
- *     warp = [ rs a ],
- * ]
  */
 
 #define DEFAULT 0
-
 #define SPACEDN 1
 #define SPACEUP 2
 #define LOWER 3
 #define RAISE 4
-
 #define REALSPACE 5
 #define ADJUST 6
-#define HYPERSPACE 7
-#define SUBSPACE 8
+#define SUBSPACE 7
+#define HYPERSPACE 8
 #define SLIPSPACE 9
 #define FOLDSPACE 10
-
-#define CYBERSPACE 11
-#define KNOWNSPACE 12
+#define KNOWNSPACE 11
+#define CYBERSPACE 12
 #define BLACKHOLE 13
 #define WORMHOLE 14
-
 #define WARP 15
 
 #include <behaviors.dtsi>
@@ -121,7 +94,7 @@
                                 &trans   &trans   &mo ADJUST &trans    &trans    &trans
                         >;
                 };
-                realspace_layer {
+                realspace_layer { // SD & SU
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -134,7 +107,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                adjust_layer {
+                adjust_layer { // L & R
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -147,7 +120,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                hyperspace_layer {
+                subspace_layer { // SD & L
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -160,7 +133,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                subspace_layer {
+                hyperspace_layer { // SU & R
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -173,7 +146,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                slipspace_layer {
+                slipspace_layer { // SD & R
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -186,7 +159,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                foldspace_layer {
+                foldspace_layer { // SU & L
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -199,7 +172,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                cyberspace_layer {
+                knownspace_layer { // L & RS
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -212,7 +185,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                knownspace_layer {
+                cyberspace_layer { // R & RS
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -225,7 +198,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                wormhole_layer {
+                blackhole_layer { // SD & A
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -238,7 +211,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                blackhole_layer {
+                wormhole_layer { // SU & A
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -251,7 +224,7 @@
                                           &kp LGUI     &trans       &kp SPACE    &kp RET  &trans   &kp RALT
                         >;
                 };
-                warp_layer {
+                warp_layer { // RS & A
 // -----------------------------------------------------------------------------------------
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
 // |      |     |     |     |     |     |   |     |     |     |     |     |      |
