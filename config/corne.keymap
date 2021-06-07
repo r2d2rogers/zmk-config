@@ -131,7 +131,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N7
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -144,7 +144,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N8
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -157,7 +157,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp N9
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -170,7 +170,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp A
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -183,7 +183,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp B
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -196,7 +196,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp C
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -209,7 +209,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp D
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -222,7 +222,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp E
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
@@ -235,7 +235,7 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
- &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp F
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
  &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
                       &trans &trans &trans &trans &trans &trans
