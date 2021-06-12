@@ -98,7 +98,8 @@
                                 &trans   &mo SLIPSPACE   &mo ADJUST &trans    &mo HYPERSPACE    &trans
                         >;
                 };
-                realspace_layer { // SD & SU
+                realspace_layer {
+// SD & SU
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -111,7 +112,8 @@
                                           &trans       &trans       &trans       &trans   &trans   &trans
                         >;
                 };
-                adjust_layer { // L & R
+                adjust_layer { 
+                // L & R
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -124,7 +126,8 @@
                                           &trans       &trans       &trans       &trans   &trans   &trans
                         >;
                 };
-                subspace_layer { // SD & L
+                subspace_layer { 
+                // SD & L
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -137,7 +140,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                hyperspace_layer { // SU & R
+                hyperspace_layer { 
+                // SU & R
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -150,7 +154,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                slipspace_layer { // SD & R
+                slipspace_layer { 
+                // SD & R
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -163,7 +168,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                foldspace_layer { // SU & L
+                foldspace_layer { 
+                // SU & L
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -176,7 +182,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                knownspace_layer { // L & RS
+                knownspace_layer { 
+                // L & RS
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -189,7 +196,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                cyberspace_layer { // R & RS
+                cyberspace_layer { 
+                // R & RS
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -202,7 +210,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                blackhole_layer { // SD & A
+                blackhole_layer { 
+                // SD & A
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -215,7 +224,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                wormhole_layer { // SU & A
+                wormhole_layer { 
+                // SU & A
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
@@ -228,7 +238,8 @@
                       &trans &trans &trans &trans &trans &trans
                         >;
                 };
-                warp_layer { // RS & A
+                warp_layer { 
+                // RS & A
 // -----------------------------------------------------------------------------------------
 // |  ESC |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
 // | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
