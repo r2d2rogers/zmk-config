@@ -41,7 +41,7 @@
     };
     spacedown_layer {
       bindings = <
-        &rgb_ug RGB_TOG &ext_power EP_TOG &ext_power EP_OFF &out OUT_USB    &out OUT_BLE    &out OUT_TOG &trans        &trans       &trans    &trans    &trans       &trans
+        &rgb_ug RGB_TOG &ext_power EP_TOG &ext_power EP_OFF &out OUT_USB    &out OUT_BLE    &out OUT_TOG &trans        &trans       &trans    &trans    &trans       &kp BSPC 
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &trans
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans       &kp HOME      &kp PG_DN    &kp PG_UP &kp END   &trans       &trans
                                                             &trans          &trans          &mo SS       &mo SL        &mo RSP      &trans
@@ -49,7 +49,7 @@
     };
     spaceup_layer {
       bindings = <
-        &rgb_ug RGB_TOG &kp N1            &kp N2            &kp N3          &kp N4          &kp N5       &kp N6        &kp N7       &kp N8    &kp N9    &kp N0       &kp BSPC
+        &rgb_ug RGB_TOG &kp N1            &kp N2            &kp N3          &kp N4          &kp N5       &kp N6        &kp N7       &kp N8    &kp N9    &kp N0       &kp DEL
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &trans
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans       &kp HOME      &kp PG_DN    &kp PG_UP &kp END   &trans       &trans
                                                             &trans          &mo RSP         &mo FS       &mo HS        &trans       &trans
@@ -74,27 +74,36 @@
 // SPACEDOWN + SPACEUP = REALSPACE
     realspace_layer {
       bindings = <
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N6
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
+        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N5
+        &reset          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &reset
+        &bootloader     &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &bootloader
                                                             &trans          &trans          &mo KS       &mo CS        &trans       &trans
       >;
     };
 // LOWER + RAISE = ADJUST
     adjust_layer { 
       bindings = <
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N7
-        &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4 &trans        &trans       &trans    &trans    &trans       &trans
-        &kp LSHFT       &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
+        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N6
+        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
+        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
                                                             &trans          &mo BH          &trans       &trans        &mo WH       &trans
+      >;
+    };
+// SPACEDOWN + LOWER = SUBSPACE
+    subspace_layer { 
+      bindings = <
+        &rgb_ug RGB_TOG &trans            &trans            &out OUT_USB    &out OUT_BLE    &out OUT_TOG &trans        &trans       &trans    &trans    &trans       &kp N7
+        &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4 &trans        &trans       &trans    &trans    &trans       &trans
+        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
+                                                            &trans          &trans          &trans       &mo BH        &mo KS       &trans
       >;
     };
 // SPACEUP + RAISE = HYPERSPACE
     hyperspace_layer { 
       bindings = <
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N8
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
+        &rgb_ug RGB_TOG &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N8
+        &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &trans
+        &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans       &kp HOME      &kp PG_DN    &kp PG_UP &kp END   &trans       &trans
                                                             &trans          &mo CS          &mo WH       &trans        &trans       &trans
       >;
     };
@@ -119,7 +128,7 @@
 // LOWER + REALSPACE = KNOWNSPACE
     knownspace_layer { 
       bindings = <
-        &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp B
+        &trans          &ext_power EP_TOG &ext_power EP_OFF &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp B 
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
                                                             &trans          &trans          &trans       &mo WP        &trans       &trans
