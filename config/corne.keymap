@@ -28,6 +28,8 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/rgb.h>
 
+&lt { quick-tap-ms = <180>; };
+
 / {
   keymap {
     compatible = "zmk,keymap";
@@ -50,7 +52,7 @@
     spaceup_layer {
       bindings = <
         &rgb_ug RGB_TOG &kp N1            &kp N2            &kp N3          &kp N4          &kp N5       &kp N6        &kp N7       &kp N8    &kp N9    &kp N0       &kp DEL
-        &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &trans
+        &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &rgb_ug RGB_TOG
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans       &kp HOME      &kp PG_DN    &kp PG_UP &kp END   &trans       &trans
                                                             &trans          &mo RSP         &mo FS       &mo HS        &trans       &trans
       >;
@@ -71,8 +73,7 @@
                                                             &trans          &mo SL          &mo AJ       &trans        &mo HS       &trans
       >;
     };
-// SPACEDOWN + SPACEUP = REALSPACE
-    realspace_layer {
+    realspace_layer { // SPACEDOWN + SPACEUP = REALSPACE
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N5
         &reset          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &reset
@@ -80,8 +81,7 @@
                                                             &trans          &trans          &mo KS       &mo CS        &trans       &trans
       >;
     };
-// LOWER + RAISE = ADJUST
-    adjust_layer { 
+    adjust_layer { // LOWER + RAISE = ADJUST
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N6
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
@@ -89,8 +89,7 @@
                                                             &trans          &mo BH          &trans       &trans        &mo WH       &trans
       >;
     };
-// SPACEDOWN + LOWER = SUBSPACE
-    subspace_layer { 
+    subspace_layer { // SPACEDOWN + LOWER = SUBSPACE
       bindings = <
         &rgb_ug RGB_TOG &trans            &trans            &out OUT_USB    &out OUT_BLE    &out OUT_TOG &trans        &trans       &trans    &trans    &trans       &kp N7
         &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4 &trans        &trans       &trans    &trans    &trans       &trans
@@ -98,8 +97,7 @@
                                                             &trans          &trans          &trans       &mo BH        &mo KS       &trans
       >;
     };
-// SPACEUP + RAISE = HYPERSPACE
-    hyperspace_layer { 
+    hyperspace_layer { // SPACEUP + RAISE = HYPERSPACE
       bindings = <
         &rgb_ug RGB_TOG &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N8
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &trans
@@ -107,8 +105,7 @@
                                                             &trans          &mo CS          &mo WH       &trans        &trans       &trans
       >;
     };
-// SPACEDOWN + RAISE = SLIPSPACE
-    slipspace_layer { 
+    slipspace_layer { // SPACEDOWN + RAISE = SLIPSPACE
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N9
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
@@ -116,8 +113,7 @@
                                                             &trans          &trans          &mo BH       &trans        &mo CS       &trans
       >;
     };
-// SPACEUP + LOWER = FOLDSPACE
-    foldspace_layer { 
+    foldspace_layer { // SPACEUP + LOWER = FOLDSPACE
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp A
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
@@ -125,8 +121,7 @@
                                                             &trans          &mo KS          &trans       &mo WH        &trans       &trans
       >;
     };
-// LOWER + REALSPACE = KNOWNSPACE
-    knownspace_layer { 
+    knownspace_layer { // LOWER + REALSPACE = KNOWNSPACE
       bindings = <
         &trans          &ext_power EP_TOG &ext_power EP_OFF &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp B 
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
@@ -134,8 +129,7 @@
                                                             &trans          &trans          &trans       &mo WP        &trans       &trans
       >;
     };
-// RAISE + REALSPACE = CYBERSPACE
-    cyberspace_layer { 
+    cyberspace_layer { // RAISE + REALSPACE = CYBERSPACE
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp C
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
@@ -143,8 +137,7 @@
                                                             &trans          &trans          &mo WP       &trans        &trans       &trans
       >;
     };
-// SPACEDOWN + ADJUST = BLACKHOLE
-    blackhole_layer { 
+    blackhole_layer { // SPACEDOWN + ADJUST = BLACKHOLE
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp D
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
@@ -152,8 +145,7 @@
                                                             &trans          &trans          &trans       &trans        &mo WP       &trans
       >;
     };
-// SPACEUP + ADJUST = WORMHOLE
-    wormhole_layer { 
+    wormhole_layer { // SPACEUP + ADJUST = WORMHOLE
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp E
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
@@ -161,8 +153,7 @@
                                                             &trans          &mo WP          &trans       &trans        &trans       &trans
       >;
     };
-// REALSPACE + ADJUST = WARP
-    warp_layer {
+    warp_layer { // REALSPACE + ADJUST = WARP
       bindings = <
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp F
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
