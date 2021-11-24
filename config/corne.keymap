@@ -4,22 +4,72 @@
 * SPDX-License-Identifier: MIT
 */
 
-#define DF 0  // DEFAULT 0
-#define SD 1  // SPACEDOWN 1
-#define SU 2  // SPACEUP 2
-#define LW 3  // LOWER 3
-#define RE 4  // RAISE 4
-#define RSP 5  // REALSPACE 5
-#define AJ 6  // ADJUST 6
-#define SS 7  // SUBSPACE 7
-#define HS 8  // HYPERSPACE 8
-#define SL 9  // SLIPSPACE 9
-#define FS 10 // FOLDSPACE 10
-#define KS 11 // KNOWNSPACE 11
-#define CS 12 // CYBERSPACE 12
-#define BH 13 // BLACKHOLE 13
-#define WH 14 // WORMHOLE 14
-#define WP 15 // WARP 15
+#define DF  0 //  0 DEFAULT 
+#define SD  1 //  1 SPACEDOWN 
+#define SU  2 //  2 SPACEUP 
+#define LW  3 //  3 LOWER 
+#define RE  4 //  4 RAISE 
+#define RSP 5 //  5 REALSPACE 
+#define AJ  6 //  6 ADJUST 
+#define SS  7 //  7 SUBSPACE 
+#define HS  8 //  8 HYPERSPACE 
+#define SL  9 //  9 SLIPSPACE 
+#define FS 10 // 10 FOLDSPACE 
+#define KS 11 // 11 KNOWNSPACE 
+#define CS 12 // 12 CYBERSPACE 
+#define BH 13 // 13 BLACKHOLE 
+#define WH 14 // 14 WORMHOLE 
+#define WP 15 // 15 WARP
+
+/ {
+  conditional_layers {
+    compatible = "zmk,conditional-layers";
+    realspace_layer {
+      if-layers = <1 2>;
+      then-layer = <5>;
+    };
+    adjust_layer {
+      if-layers = <3 4>;
+      then-layer = <6>;
+    };
+    subspace_layer {
+      if-layers = <1 3>;
+      then-layer = <7>;
+    };
+    hyperspace_layer {
+      if-layers = <2 4>;
+      then-layer = <8>;
+    };
+    slipspace_layer {
+      if-layers = <1 4>;
+      then-layer = <9>;
+    };
+    foldspace_layer {
+      if-layers = <2 3>;
+      then-layer = <10>;
+    };
+    knownspace_layer {
+      if-layers = <3 5>;
+      then-layer = <11>;
+    };
+    cyberspace_layer {
+      if-layers = <4 5>;
+      then-layer = <12>;
+    };
+    blackhole_layer {
+      if-layers = <1 6>;
+      then-layer = <13>;
+    };
+    wormhole_layer {
+      if-layers = <2 6>;
+      then-layer = <14>;
+    };
+    warp_layer {
+      if-layers = <5 6>;
+      then-layer = <15>;
+    };
+  };
+};
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -43,10 +93,10 @@
     };
     spacedown_layer {
       bindings = <
-        &rgb_ug RGB_TOG &ext_power EP_TOG &ext_power EP_OFF &out OUT_USB    &out OUT_BLE    &out OUT_TOG &trans        &trans       &trans    &trans    &trans       &kp BSPC 
+        &rgb_ug RGB_TOG &ext_power EP_TOG &ext_power EP_OFF &out OUT_USB    &out OUT_BLE    &out OUT_TOG &trans        &trans       &trans    &trans    &trans       &kp BSPC
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &trans
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans       &kp HOME      &kp PG_DN    &kp PG_UP &kp END   &trans       &trans
-                                                            &trans          &trans          &mo SS       &mo SL        &mo RSP      &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     spaceup_layer {
@@ -54,7 +104,7 @@
         &rgb_ug RGB_TOG &kp N1            &kp N2            &kp N3          &kp N4          &kp N5       &kp N6        &kp N7       &kp N8    &kp N9    &kp N0       &kp DEL
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &rgb_ug RGB_TOG
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans       &kp HOME      &kp PG_DN    &kp PG_UP &kp END   &trans       &trans
-                                                            &trans          &mo RSP         &mo FS       &mo HS        &trans       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     lower_layer {
@@ -62,7 +112,7 @@
         &trans          &kp N1            &kp N2            &kp N3          &kp N4          &kp N5       &kp N6        &kp N7       &kp N8    &kp N9    &kp N0       &kp BSPC
         &kp F11         &kp F1            &kp F2            &kp F3          &kp F4          &kp F5       &kp KP_PLUS   &kp N4       &kp N5    &kp N6    &kp KP_ENTER &kp KP_MULTIPLY
         &kp F12         &kp F6            &kp F7            &kp F7          &kp F9          &kp F10      &kp KP_MINUS  &kp N1       &kp N2    &kp N3    &kp KP_ENTER &kp KP_DIVIDE
-                                                            &trans          &mo SS          &trans       &mo AJ        &mo FS       &kp N0
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     raise_layer {
@@ -70,7 +120,7 @@
         &trans          &kp EXCL          &kp AT            &kp HASH        &kp DLLR        &kp PRCNT    &kp CARET     &kp AMPS     &kp ASTRK &kp LPAR  &kp RPAR     &kp BSPC
         &trans          &trans            &trans            &trans          &trans          &trans       &kp GRAVE     &kp MINUS    &kp EQUAL &kp LBKT  &kp RBKT     &kp BSLH
         &trans          &trans            &trans            &trans          &trans          &trans       &kp TILDE     &kp UNDER    &kp PLUS  &kp LBRC  &kp RBRC     &kp PIPE
-                                                            &trans          &mo SL          &mo AJ       &trans        &mo HS       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     realspace_layer { // SPACEDOWN + SPACEUP = REALSPACE
@@ -78,7 +128,7 @@
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N5
         &reset          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &reset
         &bootloader     &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &bootloader
-                                                            &trans          &trans          &mo KS       &mo CS        &trans       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     adjust_layer { // LOWER + RAISE = ADJUST
@@ -86,7 +136,7 @@
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N6
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &mo BH          &trans       &trans        &mo WH       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     subspace_layer { // SPACEDOWN + LOWER = SUBSPACE
@@ -94,7 +144,7 @@
         &rgb_ug RGB_TOG &trans            &trans            &out OUT_USB    &out OUT_BLE    &out OUT_TOG &trans        &trans       &trans    &trans    &trans       &kp N7
         &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2    &bt BT_SEL 3    &bt BT_SEL 4 &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &trans          &trans       &mo BH        &mo KS       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     hyperspace_layer { // SPACEUP + RAISE = HYPERSPACE
@@ -102,7 +152,7 @@
         &rgb_ug RGB_TOG &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N8
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI &rgb_ug RGB_SPI &trans       &kp LEFT      &kp DOWN     &kp UP    &kp RIGHT &trans       &trans
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD &rgb_ug RGB_SPD &trans       &kp HOME      &kp PG_DN    &kp PG_UP &kp END   &trans       &trans
-                                                            &trans          &mo CS          &mo WH       &trans        &trans       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     slipspace_layer { // SPACEDOWN + RAISE = SLIPSPACE
@@ -110,7 +160,7 @@
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp N9
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &trans          &mo BH       &trans        &mo CS       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     foldspace_layer { // SPACEUP + LOWER = FOLDSPACE
@@ -118,15 +168,15 @@
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp A
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &mo KS          &trans       &mo WH        &trans       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     knownspace_layer { // LOWER + REALSPACE = KNOWNSPACE
       bindings = <
-        &trans          &ext_power EP_TOG &ext_power EP_OFF &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp B 
+        &trans          &ext_power EP_TOG &ext_power EP_OFF &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp B
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &trans          &trans       &mo WP        &trans       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     cyberspace_layer { // RAISE + REALSPACE = CYBERSPACE
@@ -134,7 +184,7 @@
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp C
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &trans          &mo WP       &trans        &trans       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     blackhole_layer { // SPACEDOWN + ADJUST = BLACKHOLE
@@ -142,7 +192,7 @@
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp D
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &trans          &trans       &trans        &mo WP       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     wormhole_layer { // SPACEUP + ADJUST = WORMHOLE
@@ -150,7 +200,7 @@
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &kp E
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
         &trans          &trans            &trans            &trans          &trans          &trans       &trans        &trans       &trans    &trans    &trans       &trans
-                                                            &trans          &mo WP          &trans       &trans        &trans       &trans
+                                                            &trans          &trans          &trans       &trans        &trans       &trans
       >;
     };
     warp_layer { // REALSPACE + ADJUST = WARP
