@@ -5,68 +5,112 @@
 */
 
 #define DF  0 //  0 DEFAULT 
-#define SD  1 //  1 SPACEDOWN 
-#define SU  2 //  2 SPACEUP 
-#define LW  3 //  3 LOWER 
-#define RE  4 //  4 RAISE 
-#define RSP 5 //  5 REALSPACE 
-#define AJ  6 //  6 ADJUST 
-#define SS  7 //  7 SUBSPACE 
-#define HS  8 //  8 HYPERSPACE 
-#define SL  9 //  9 SLIPSPACE 
-#define FS 10 // 10 FOLDSPACE 
-#define KS 11 // 11 KNOWNSPACE 
-#define CS 12 // 12 CYBERSPACE 
-#define BH 13 // 13 BLACKHOLE 
-#define WH 14 // 14 WORMHOLE 
-#define WP 15 // 15 WARP
+#define GM  1 //  1 GAMING 
+#define GA  2 //  2 GAMMA 
+#define DE  3 //  3 DELTA 
+#define EP  4 //  4 EPSILON 
+#define ZE  5 //  5 ZETA 
+#define SD  6 //  6 SPACEDOWN 
+#define SU  7 //  7 SPACEUP 
+#define LW  8 //  8 LOWER 
+#define RE  9 //  9 RAISE 
+#define RS 10 // 10 REALSPACE 
+#define AJ 11 // 11 ADJUST 
+#define SS 12 // 12 SUBSPACE 
+#define HS 13 // 13 HYPERSPACE 
+#define SL 14 // 14 SLIPSPACE 
+#define FS 15 // 15 FOLDSPACE 
+#define KS 16 // 16 KNOWNSPACE 
+#define CS 17 // 17 CYBERSPACE 
+#define BH 18 // 18 BLACKHOLE 
+#define WH 19 // 19 WORMHOLE 
+#define WP 20 // 20 WARP
+
+/*
+ * Temporarily here because nice nano v2 spi is not defined on ZMk Yet
+ * Source: https://github.com/zmkfirmware/zmk/blob/main/app/boards/shields/reviung41/boards/nice_nano.overlay
+ * GitHub Issue: https://github.com/zmkfirmware/zmk/issues/885
+ */
+
+&spi1 {
+   compatible = "nordic,nrf-spim";
+   status = "okay";
+   mosi-pin = <6>;
+   // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
+   sck-pin = <5>;
+   miso-pin = <7>;
+
+   led_strip: ws2812@0 {
+      compatible = "worldsemi,ws2812-spi";
+      label = "WS2812";
+
+      /* SPI */
+      reg = <0>; /* ignored, but necessary for SPI bindings */
+      spi-max-frequency = <4000000>;
+
+      /* WS2812 */
+      chain-length = <27>; /* arbitrary; change at will */
+      spi-one-frame = <0x70>;
+      spi-zero-frame = <0x40>;
+   };
+};
+
+/ {
+   chosen {
+      zmk,underglow = &led_strip;
+   };
+};
+
+/*
+ * Temporarily here because nice nano v2 spi is not defined on ZMK YET
+ */
 
 / {
   conditional_layers {
     compatible = "zmk,conditional-layers";
     realspace_layer {
-      if-layers = <1 2>;
-      then-layer = <5>;
-    };
-    adjust_layer {
-      if-layers = <3 4>;
-      then-layer = <6>;
-    };
-    subspace_layer {
-      if-layers = <1 3>;
-      then-layer = <7>;
-    };
-    hyperspace_layer {
-      if-layers = <2 4>;
-      then-layer = <8>;
-    };
-    slipspace_layer {
-      if-layers = <1 4>;
-      then-layer = <9>;
-    };
-    foldspace_layer {
-      if-layers = <2 3>;
+      if-layers = <6 7>;
       then-layer = <10>;
     };
-    knownspace_layer {
-      if-layers = <3 5>;
+    adjust_layer {
+      if-layers = <8 9>;
       then-layer = <11>;
     };
-    cyberspace_layer {
-      if-layers = <4 5>;
+    subspace_layer {
+      if-layers = <6 8>;
       then-layer = <12>;
     };
-    blackhole_layer {
-      if-layers = <1 6>;
+    hyperspace_layer {
+      if-layers = <7 9>;
       then-layer = <13>;
     };
-    wormhole_layer {
-      if-layers = <2 6>;
+    slipspace_layer {
+      if-layers = <6 9>;
       then-layer = <14>;
     };
-    warp_layer {
-      if-layers = <5 6>;
+    foldspace_layer {
+      if-layers = <7 8>;
       then-layer = <15>;
+    };
+    knownspace_layer {
+      if-layers = <8 10>;
+      then-layer = <16>;
+    };
+    cyberspace_layer {
+      if-layers = <9 10>;
+      then-layer = <17>;
+    };
+    blackhole_layer {
+      if-layers = <6 11>;
+      then-layer = <18>;
+    };
+    wormhole_layer {
+      if-layers = <7 11>;
+      then-layer = <19>;
+    };
+    warp_layer {
+      if-layers = <10 11>;
+      then-layer = <20>;
     };
   };
 };
@@ -79,15 +123,56 @@
 #include <dt-bindings/zmk/rgb.h>
 
 &lt { quick-tap-ms = <180>; };
+&mt { tapping-term-ms = <180>; };
 
 / {
   keymap {
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-        &kp TAB         &kp Q             &kp W             &kp E           &kp R           &kp T        &kp Y         &kp U        &kp I     &kp O     &kp P        &kp BSLH
-        &mt LCTRL ESC   &kp A             &kp S             &kp D           &kp F           &kp G        &kp H         &kp J        &kp K     &kp L     &kp SEMI     &kp SQT
-        &kp LSHFT       &kp Z             &kp X             &kp C           &kp V           &kp B        &kp N         &kp M        &kp COMMA &kp DOT   &kp FSLH     &kp RSHFT
+        &kp TAB         &kp Q             &kp W             &kp E           &kp R           &kp T        &kp Y         &kp U        &kp I       &kp O      &kp P         &kp BSLH
+        &mt LCTRL ESC   &kp A             &kp S             &kp D           &kp F           &kp G        &kp H         &kp J        &kp K       &kp L      &kp SEMI      &kp SQT
+        &kp LSHFT       &kp Z             &kp X             &kp C           &kp V           &kp B        &kp N         &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
+                                                            &kp LGUI        &lt SD SPACE    &lt LW BSPC  &lt RE RET    &lt SU SPACE &kp RALT
+      >;
+    };
+    game_layer {
+      bindings = <
+        &kp TAB         &kp Q             &kp W             &kp E           &kp R           &kp T        &kp Y         &kp U        &kp I       &kp O      &kp P         &kp BSLH
+        &mt LCTRL ESC   &kp A             &kp S             &kp D           &kp F           &kp G        &kp H         &kp J        &kp K       &kp L      &kp SEMI      &kp SQT
+        &kp LSHFT       &kp Z             &kp X             &kp C           &kp V           &kp B        &kp N         &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
+                                                            &kp LGUI        &lt SD SPACE    &lt LW BSPC  &lt RE RET    &lt SU SPACE &kp RALT
+      >;
+    };
+    gamma_layer {
+      bindings = <
+        &kp TAB         &kp Q             &kp W             &kp E           &kp R           &kp T        &kp Y         &kp U        &kp I       &kp O      &kp P         &kp BSLH
+        &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D     &mt LSHFT F     &kp G        &kp H         &mt RSHFT J  &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
+        &kp LSHFT       &kp Z             &kp X             &kp C           &kp V           &kp B        &kp N         &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
+                                                            &kp LGUI        &lt SD SPACE    &lt LW BSPC  &lt RE RET    &lt SU SPACE &kp RALT
+      >;
+    };
+    delta_layer {
+      bindings = <
+        &kp TAB         &kp Q             &kp W             &kp E           &kp R           &kp T        &kp Y         &kp U        &kp I       &kp O      &kp P         &kp BSLH
+        &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D     &mt LSHFT F     &kp G        &kp H         &mt RSHFT J  &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
+        &kp LSHFT       &kp Z             &kp X             &kp C           &kp V           &kp B        &kp N         &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
+                                                            &kp LGUI        &lt SD SPACE    &lt LW BSPC  &lt RE RET    &lt SU SPACE &kp RALT
+      >;
+    };
+    epsilon_layer {
+      bindings = <
+        &kp TAB         &kp Q             &kp W             &kp E           &kp R           &kp T        &kp Y         &kp U        &kp I       &kp O      &kp P         &kp BSLH
+        &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D     &mt LSHFT F     &kp G        &kp H         &mt RSHFT J  &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
+        &kp LSHFT       &kp Z             &kp X             &kp C           &kp V           &kp B        &kp N         &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
+                                                            &kp LGUI        &lt SD SPACE    &lt LW BSPC  &lt RE RET    &lt SU SPACE &kp RALT
+      >;
+    };
+    zeta_layer {
+      bindings = <
+        &kp TAB         &kp Q             &kp W             &kp E           &kp R           &kp T        &kp Y         &kp U        &kp I       &kp O      &kp P         &kp BSLH
+        &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D     &mt LSHFT F     &kp G        &kp H         &mt RSHFT J  &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
+        &kp LSHFT       &kp Z             &kp X             &kp C           &kp V           &kp B        &kp N         &kp M        &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
                                                             &kp LGUI        &lt SD SPACE    &lt LW BSPC  &lt RE RET    &lt SU SPACE &kp RALT
       >;
     };
