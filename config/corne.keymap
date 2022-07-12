@@ -15,35 +15,35 @@
 #include <dt-bindings/led/led.h>
 
 &spi1 {
-	compatible = "nordic,nrf-spim";
-	/* Cannot be used together with i2c0. */
-	status = "okay";
-	mosi-pin = <6>;
-	// Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
-	sck-pin = <5>;
-	miso-pin = <7>;
+  compatible = "nordic,nrf-spim";
+  /* Cannot be used together with i2c0. */
+  status = "okay";
+  mosi-pin = <6>;
+  // Unused pins, needed for SPI definition, but not used by the ws2812 driver itself.
+  sck-pin = <5>;
+  miso-pin = <7>;
 
-	led_strip: ws2812@0 {
-		compatible = "worldsemi,ws2812-spi";
-		label = "SK6812mini";
+  led_strip: ws2812@0 {
+    compatible = "worldsemi,ws2812-spi";
+    label = "SK6812mini";
 
-		/* SPI */
-		reg = <0>; /* ignored, but necessary for SPI bindings */
-		spi-max-frequency = <4000000>;
+    /* SPI */
+    reg = <0>; /* ignored, but necessary for SPI bindings */
+    spi-max-frequency = <4000000>;
 
-		/* WS2812 */
-		chain-length = <27>; /* There are per-key RGB, but the first 6 are underglow */
-		spi-one-frame = <0x70>;
-		spi-zero-frame = <0x40>;
+    /* WS2812 */
+    chain-length = <27>; /* There are per-key RGB, but the first 6 are underglow */
+    spi-one-frame = <0x70>;
+    spi-zero-frame = <0x40>;
 
-		color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
-	};
+    color-mapping = <LED_COLOR_ID_GREEN LED_COLOR_ID_RED LED_COLOR_ID_BLUE>;
+  };
 };
 
 / {
-	chosen {
-		zmk,underglow = &led_strip;
-	};
+  chosen {
+    zmk,underglow = &led_strip;
+  };
 };
 
 #define _DF  0 //  0 DEFAULT
@@ -124,191 +124,191 @@
     compatible = "zmk,keymap";
     default_layer {
       bindings = <
-      //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
+        //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
         &kp TAB         &kp Q             &kp W             &kp E             &kp R           &kp T                                  &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSLH
         &mt LCTRL ESC   &kp A             &kp S             &kp D             &kp F           &kp G                                  &kp H         &kp J       &kp K       &kp L      &kp SEMI      &kp SQT
         &kp LSHFT       &kp Z             &kp X             &kp C             &kp V           &kp B                                  &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-                                                                              &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
+        &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
         >;
     };
     game_layer {
       bindings = <
-      //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
+        //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
         &kp TAB         &kp Q             &kp W             &kp E             &kp R           &kp T                                  &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSLH
         &mt LCTRL ESC   &kp A             &kp S             &kp D             &kp F           &kp G                                  &kp H         &kp J       &kp K       &kp L      &kp SEMI      &kp SQT
         &kp LSHFT       &kp Z             &kp X             &kp C             &kp V           &kp B                                  &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-                                                                              &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
+        &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
         >;
     };
     gamma_layer {
       bindings = <
-      //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
+        //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
         &kp TAB         &kp Q             &kp W             &kp E             &kp R           &kp T                                  &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSLH
         &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D       &mt LSHFT F     &kp G                                  &kp H         &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
         &kp LSHFT       &kp Z             &kp X             &kp C             &kp V           &kp B                                  &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-                                                                              &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
+        &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
         >;
     };
     delta_layer {
       bindings = <
-      //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
+        //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
         &kp TAB         &kp Q             &kp W             &kp E             &kp R           &kp T                                  &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSLH
         &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D       &mt LSHFT F     &kp G                                  &kp H         &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
         &kp LSHFT       &kp Z             &kp X             &kp C             &kp V           &kp B                                  &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-                                                                              &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
+        &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
         >;
     };
     epsilon_layer {
       bindings = <
-      //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
+        //&kp GRAVE       &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
         &kp TAB         &kp Q             &kp W             &kp E             &kp R           &kp T                                  &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSLH
         &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D       &mt LSHFT F     &kp G                                  &kp H         &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
         &kp LSHFT       &kp Z             &kp X             &kp C             &kp V           &kp B                                  &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-                                                                              &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
+        &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
         >;
     };
     zeta_layer {
       bindings = <
-      //&kp GRAVE       &kp N1            &kp N2            &kp N3          &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
+        //&kp GRAVE       &kp N1            &kp N2            &kp N3          &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
         &kp TAB         &kp Q             &kp W             &kp E             &kp R           &kp T                                  &kp Y         &kp U       &kp I       &kp O      &kp P         &kp BSLH
         &mt LCTRL ESC   &mt RGUI A        &mt RALT S        &mt RCTRL D       &mt LSHFT F     &kp G                                  &kp H         &mt RSHFT J &mt RCTRL K &mt RALT L &mt RGUI SEMI &kp SQT
         &kp LSHFT       &kp Z             &kp X             &kp C             &kp V           &kp B                                  &kp N         &kp M       &kp COMMA   &kp DOT    &kp FSLH      &kp RSHFT
-                                                                              &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
+        &kp LGUI        &lt _SD SPACE &lt _LW BSPC &lt _RE RET &lt _SU SPACE &kp RALT
         >;
     };
     spacedown_layer {
       bindings = <
-      //&rgb_ug RGB_TOG &ext_power EP_TOG &ext_power EP_OFF &out OUT_USB      &out OUT_BLE    &out OUT_TOG                           &trans        &trans      &trans      &trans     &trans        &kp BSPC
+        //&rgb_ug RGB_TOG &ext_power EP_TOG &ext_power EP_OFF &out OUT_USB      &out OUT_BLE    &out OUT_TOG                           &trans        &trans      &trans      &trans     &trans        &kp BSPC
         &rgb_ug RGB_TOG &ext_power EP_TOG &ext_power EP_OFF &out OUT_USB      &out OUT_BLE    &out OUT_TOG                           &trans        &trans      &trans      &trans     &trans        &kp BSPC
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI &trans                                 &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT  &trans        &trans
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD &trans                                 &kp HOME      &kp PG_DN   &kp PG_UP   &kp END    &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     spaceup_layer {
       bindings = <
-      //&rgb_ug RGB_TOG &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp DEL
+        //&rgb_ug RGB_TOG &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp DEL
         &rgb_ug RGB_TOG &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp DEL
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI &trans                                 &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT  &trans        &rgb_ug RGB_TOG
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD &trans                                 &kp HOME      &kp PG_DN   &kp PG_UP   &kp END    &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     lower_layer {
       bindings = <
-      //&trans          &kp F1            &kp F2            &kp F3            &kp F4          &kp F5                                 &kp F6        &kp F7      &kp F8      &kp F9     &kp F10       &kp F11
+        //&trans          &kp F1            &kp F2            &kp F3            &kp F4          &kp F5                                 &kp F6        &kp F7      &kp F8      &kp F9     &kp F10       &kp F11
         &trans          &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
         &kp F11         &kp F1            &kp F2            &kp F3            &kp F4          &kp F5                                 &kp KP_PLUS   &kp N4      &kp N5      &kp N6     &kp KP_ENTER  &kp KP_MULTIPLY
         &kp F12         &kp F6            &kp F7            &kp F8            &kp F9          &kp F10                                &kp KP_MINUS  &kp N1      &kp N2      &kp N3     &kp KP_ENTER  &kp KP_DIVIDE
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     raise_layer {
       bindings = <
-      //&trans          &kp EXCL          &kp AT            &kp HASH          &kp DLLR        &kp PRCNT                              &kp CARET     &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR      &kp BSPC
+        //&trans          &kp EXCL          &kp AT            &kp HASH          &kp DLLR        &kp PRCNT                              &kp CARET     &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR      &kp BSPC
         &trans          &kp EXCL          &kp AT            &kp HASH          &kp DLLR        &kp PRCNT                              &kp CARET     &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR      &kp BSPC
         &trans          &trans            &trans            &trans            &trans          &trans                                 &kp GRAVE     &kp MINUS   &kp EQUAL   &kp LBKT   &kp RBKT      &kp BSLH
         &trans          &trans            &trans            &trans            &trans          &trans                                 &kp TILDE     &kp UNDER   &kp PLUS    &kp LBRC   &kp RBRC      &kp PIPE
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     realspace_layer { // SPACEDOWN + SPACEUP = REALSPACE
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N5
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N5
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N5
         &reset          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &reset
         &bootloader     &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &bootloader
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     adjust_layer { // LOWER + RAISE = ADJUST
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N6
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N6
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N6
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     subspace_layer { // SPACEDOWN + LOWER = SUBSPACE
       bindings = <
-      //&rgb_ug RGB_TOG &trans            &trans            &out OUT_USB      &out OUT_BLE    &out OUT_TOG                           &trans        &trans      &trans      &trans     &trans        &kp N7
+        //&rgb_ug RGB_TOG &trans            &trans            &out OUT_USB      &out OUT_BLE    &out OUT_TOG                           &trans        &trans      &trans      &trans     &trans        &kp N7
         &rgb_ug RGB_TOG &trans            &trans            &out OUT_USB      &out OUT_BLE    &out OUT_TOG                           &trans        &trans      &trans      &trans     &trans        &kp N7
         &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4                           &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     hyperspace_layer { // SPACEUP + RAISE = HYPERSPACE
       bindings = <
-      //&rgb_ug RGB_TOG &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N8
+        //&rgb_ug RGB_TOG &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N8
         &rgb_ug RGB_TOG &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N8
         &rgb_ug RGB_EFF &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI &trans                                 &kp LEFT      &kp DOWN    &kp UP      &kp RIGHT  &trans        &trans
         &rgb_ug RGB_EFR &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD &trans                                 &kp HOME      &kp PG_DN   &kp PG_UP   &kp END    &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     slipspace_layer { // SPACEDOWN + RAISE = SLIPSPACE
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N9
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N9
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N9
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     foldspace_layer { // SPACEUP + LOWER = FOLDSPACE
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N9
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp N9
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp A
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     knownspace_layer { // LOWER + REALSPACE = KNOWNSPACE
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp B
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp B
         &trans          &ext_power EP_TOG &ext_power EP_OFF &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp B
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     cyberspace_layer { // RAISE + REALSPACE = CYBERSPACE
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp C
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp C
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp C
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     blackhole_layer { // SPACEDOWN + ADJUST = BLACKHOLE
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp D
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp D
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp D
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     wormhole_layer { // SPACEUP + ADJUST = WORMHOLE
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp E
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp E
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp E
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
     warp_layer { // REALSPACE + ADJUST = WARP
       bindings = <
-      //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp F
+        //&trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp F
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &kp F
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans      &trans      &trans     &trans        &trans
-                                                                              &trans          &trans        &trans       &trans      &trans        &trans
+        &trans          &trans        &trans       &trans      &trans        &trans
         >;
     };
   };
