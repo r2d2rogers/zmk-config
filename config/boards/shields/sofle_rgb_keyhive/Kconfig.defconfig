@@ -4,7 +4,7 @@
 if SHIELD_SOFLE_RGB_KEYHIVE_LEFT
 
 config ZMK_KEYBOARD_NAME
-	default "Sofle Keyhive r2d2rogers"
+	default "Sofle-r2d2rogers"
 
 config ZMK_SPLIT_ROLE_CENTRAL
 	default y
