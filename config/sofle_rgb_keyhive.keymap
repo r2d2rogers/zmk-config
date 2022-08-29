@@ -260,7 +260,7 @@
         &trans          &trans            &trans            &trans            &trans          &trans                                 &trans        &trans    &trans          &trans    &trans   &kp N7
         &rgb_ug RGB_TOG &trans            &trans            &out OUT_USB      &out OUT_BLE    &out OUT_TOG                           &trans        &trans    &trans          &trans    &trans   &trans
         &bt BT_CLR      &bt BT_SEL 0      &bt BT_SEL 1      &bt BT_SEL 2      &bt BT_SEL 3    &bt BT_SEL 4                           &trans        &trans    &trans          &trans    &trans   &trans
-        &trans          &trans            &trans            &trans            &trans          &trans        &trans       &trans      &trans        &trans    &trans          &trans    &trans   &trans
+        &trans          &bt BT_SEL 5      &bt BT_SEL 6      &bt BT_SEL 7      &bt BT_SEL 8    &bt BT_SEL 9  &trans       &trans      &trans        &trans    &trans          &trans    &trans   &trans
                                           &trans            &trans            &trans          &trans        &trans       &trans      &trans        &trans    &trans          &trans
         >;
       sensor-bindings = <
