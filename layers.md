@@ -1,22 +1,23 @@
-
-# define _DF  0 //  0 DEFAULT
-# define _GM  1 //  1 GAMING
-# define _GA  2 //  2 GAMMA
-# define _DE  3 //  3 DELTA
-# define _EP  4 //  4 EPSILON
-# define _ZE  5 //  5 ZETA
-# define _SD  6 //  6 SPACEDOWN
-# define _SU  7 //  7 SPACEUP
-# define _LW  8 //  8 LOWER
-# define _RE  9 //  9 RAISE
-# define _RS 10 // 10 REALSPACE
-# define _AJ 11 // 11 ADJUST
-# define _SS 12 // 12 SUBSPACE
-# define _HS 13 // 13 HYPERSPACE
-# define _SL 14 // 14 SLIPSPACE
-# define _FS 15 // 15 FOLDSPACE
-# define _KS 16 // 16 KNOWNSPACE
-# define _CS 17 // 17 CYBERSPACE
-# define _BH 18 // 18 BLACKHOLE
-# define _WH 19 // 19 WORMHOLE
-# define _WP 20 // 20 WARP
+| id | VAR | Layer      | Description                            | D | L | R | U |
+|----|-----|------------|----------------------------------------|---|---|---|---|
+| 0  | \_DF | Default    | Qwerty base layer                      |   |   |   |   |
+| 1  | \_GM | Game       | Gaming base layer                      |   |   |   |   |
+| 2  | \_GA | Gamma      | Qwerty base layer with home row mods   |   |   |   |   |
+| 3  | \_DE | Delta      | Qwerty base layer                      |   |   |   |   |
+| 4  | \_EP | Eplsilon   | Qwerty base layer                      |   |   |   |   |
+| 5  | \_ZE | Zeta       | Qwerty base layer                      |   |   |   |   |
+| 6  | \_SD | SpaceDown  | base movement layer                    | X |   |   |   |
+| 7  | \_SU | SpaceUp    | base movement layer                    |   |   |   | X |
+| 8  | \_LW | Lower      | Numbers and function keys              |   | X |   |   |
+| 9  | \_RE | Raise      | Punctuation keys                       |   |   | X |   |
+| 10 | \_RS | RealSpace  | Special keys print screen etc.         | X |   |   | X |
+| 11 | \_AJ | Adjust     |                                        |   | X | X |   |
+| 12 | \_SS | SubSpace   | Communication BT profiles              | X | X |   |   |
+| 13 | \_HS | HyperSpace | Window movement                        |   |   | X | X |
+| 14 | \_SL | SlipSpace  |                                        | X |   | X |   |
+| 15 | \_FS | FoldSpace  |                                        |   | X |   | X |
+| 16 | \_KS | KnownSpace |                                        | X | X |   | X |
+| 17 | \_CS | CyberSpace |                                        | X |   | X | X |
+| 18 | \_BH | Blackhole  |                                        | X | X | X |   |
+| 19 | \_WH | Wormhole   |                                        |   | X | X | X |
+| 20 | \_WP | Warp       | Keyboard settings, default layer, etc. | X | X | X | X |
