@@ -9,7 +9,7 @@ manifest:
       remote: zmkfirmware
       revision: main
       import: app/west.yml
-    - name: zmk-r2d2rogers
+    - name: zmk
       remote: r2d2rogers
       revision: main
       import: app/west.yml
