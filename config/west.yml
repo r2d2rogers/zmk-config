@@ -4,16 +4,10 @@ manifest:
       url-base: https://github.com/zmkfirmware
     - name: r2d2rogers
       url-base: https://github.com/r2d2rogers
-    - name: mouse-ftc
-      url-base: https://github.com/ftc
   projects:
     - name: zmk
       remote: r2d2rogers
-      revision: main
-      import: app/west.yml
-    - name: zmk-mouse
-      remote: mouse-ftc
-      revision: mouse-ftc
+      revision: ftc/ftc-mouse
       import: app/west.yml
   self:
     path: config
