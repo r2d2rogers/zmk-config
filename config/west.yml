@@ -3,12 +3,8 @@ manifest:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
     - name: r2d2rogers
-      url-base: https://github.com/r2d2rogers
+      url-base: https://github.com/zmkfirmware
   projects:
-    - name: zmk
-      remote: zmkfirmware
-      revision: main
-      import: app/west.yml
     - name: zmk
       remote: r2d2rogers
       revision: main
