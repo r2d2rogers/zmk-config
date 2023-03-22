@@ -6,8 +6,8 @@ manifest:
       url-base: https://github.com/r2d2rogers
   projects:
     - name: zmk
-      remote: r2d2rogers
-      revision: mouse-ftc
+      remote: DiogoDoreto
+      revision: waterfowl-encoders
       import: app/west.yml
   self:
     path: config
