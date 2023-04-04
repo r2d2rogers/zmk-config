@@ -14,10 +14,10 @@
 | 11 | \_AJ | Adjust     |                                        |   | X | X |   |
 | 12 | \_SS | SubSpace   | Communication BT profiles              | X | X |   |   |
 | 13 | \_HS | HyperSpace | Window movement                        |   |   | X | X |
-| 14 | \_SL | SlipSpace  |                                        | X |   | X |   |
-| 15 | \_FS | FoldSpace  |                                        |   | X |   | X |
-| 16 | \_KS | KnownSpace |                                        | X | X |   | X |
-| 17 | \_CS | CyberSpace |                                        | X |   | X | X |
-| 18 | \_BH | Blackhole  |                                        | X | X | X |   |
-| 19 | \_WH | Wormhole   |                                        |   | X | X | X |
+| 14 | \_KS | KnownSpace |                                        | X |   | X |   |
+| 15 | \_CS | CyberSpace |                                        |   | X |   | X |
+| 16 | \_SL | SlipSpace  |                                        | X | X | X |   |
+| 17 | \_FS | FoldSpace  |                                        |   | X | X | X |
+| 18 | \_BH | Blackhole  |                                        | X | X |   | X |
+| 19 | \_WH | Wormhole   |                                        | X |   | X | X |
 | 20 | \_WP | Warp       | Keyboard settings, default layer, etc. | X | X | X | X |
