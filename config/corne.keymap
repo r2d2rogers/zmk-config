@@ -27,10 +27,10 @@
 #define _AJ 11 // 11 ADJUST
 #define _SS 12 // 12 SUBSPACE
 #define _HS 13 // 13 HYPERSPACE
-#define _SL 14 // 14 SLIPSPACE
-#define _FS 15 // 15 FOLDSPACE
-#define _KS 16 // 16 KNOWNSPACE
-#define _CS 17 // 17 CYBERSPACE
+#define _KS 14 // 14 KNOWNSPACE
+#define _CS 15 // 15 CYBERSPACE
+#define _SL 16 // 16 SLIPSPACE
+#define _FS 17 // 17 FOLDSPACE
 #define _BH 18 // 18 BLACKHOLE
 #define _WH 19 // 19 WORMHOLE
 #define _WP 20 // 20 WARP
@@ -90,21 +90,21 @@
       if-layers = <_SU _RE>;
       then-layer = <_HS>;
     };
-    slipspace_layer {
-      if-layers = <_SD _RE>;
-      then-layer = <_SL>;
-    };
-    foldspace_layer {
-      if-layers = <_SU _LW>;
-      then-layer = <_FS>;
-    };
     knownspace_layer {
-      if-layers = <_LW _RS>;
+      if-layers = <_SD _RE>;
       then-layer = <_KS>;
     };
     cyberspace_layer {
-      if-layers = <_RE _RS>;
+      if-layers = <_LW _SU>;
       then-layer = <_CS>;
+    };
+    slipspace_layer {
+      if-layers = <_SD _AJ>;
+      then-layer = <_SL>;
+    };
+    foldspace_layer {
+      if-layers = <_AJ _SU;
+      then-layer = <_FS>;
     };
     blackhole_layer {
       if-layers = <_SD _AJ>;
@@ -214,11 +214,11 @@
       label = "lower";
       bindings = <
       //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-      //&trans          &kp F1            &kp F2            &kp F3            &kp F4          &kp F5                                 &kp F6        &kp F7      &kp F8      &kp F9     &kp F10       &kp F11
-        &trans          &kp N1            &kp N2            &kp N3            &kp N4          &kp N5                                 &kp N6        &kp N7      &kp N8      &kp N9     &kp N0        &kp BSPC
-        &kp F11         &kp F1            &kp F2            &kp F3            &kp F4          &kp F5                                 &kp KP_PLUS   &kp N4      &kp N5      &kp N6     &kp KP_ENTER  &kp KP_MULTIPLY
-        &kp F12         &kp F6            &kp F7            &kp F8            &kp F9          &kp F10                                &kp KP_MINUS  &kp N1      &kp N2      &kp N3     &kp KP_ENTER  &kp KP_DIVIDE
-                                          &trans          &trans        &trans       &trans      &trans        &trans
+      //&trans            &kp F1            &kp F2            &kp F3            &kp F4            &kp F5                                                &kp F6            &kp F7            &kp F8            &kp F9            &kp F10           &kp F11
+        &trans            &kp N1            &kp N2            &kp N3            &kp N4            &kp N5                                                &kp N6            &kp N7            &kp N8            &kp N9            &kp N0            &kp BSPC
+        &kp F11           &kp F1            &kp F2            &kp F3            &kp F4            &kp F5                                                &kp KP_PLUS       &kp N4            &kp N5            &kp N6            &kp KP_ENTER      &kp KP_MULTIPLY
+        &kp F12           &kp F6            &kp F7            &kp F8            &kp F9            &kp F10                                               &kp KP_MINUS      &kp N1            &kp N2            &kp N3            &kp KP_ENTER      &kp KP_DIVIDE
+                                                                                &trans            &trans            &trans            &trans            &trans            &trans
         >;
     };
     raise_layer {
@@ -276,29 +276,7 @@
                                                                                 &trans            &trans            &trans            &trans            &trans            &trans
         >;
     };
-    slipspace_layer { // SPACEDOWN + RAISE = SLIPSPACE
-      label = "slipspace";
-      bindings = <
-      //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-      //&trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &kp F
-        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
-        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
-        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
-                                                                                &trans            &trans            &trans            &trans            &trans            &trans
-        >;
-    };
-    foldspace_layer { // SPACEUP + LOWER = FOLDSPACE
-      label = "foldspace";
-      bindings = <
-      //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
-      //&trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &kp F
-        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
-        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
-        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
-                                                                                &trans            &trans            &trans            &trans            &trans            &trans
-        >;
-    };
-    knownspace_layer { // LOWER + REALSPACE = KNOWNSPACE
+    knownspace_layer { // SPACEDOWN + RAISE = KNOWNSPACE
       label = "knownspace";
       bindings = <
       //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
@@ -309,8 +287,30 @@
                                                                                 &trans            &trans            &trans            &trans            &trans            &trans
         >;
     };
-    cyberspace_layer { // RAISE + REALSPACE = CYBERSPACE
+    cyberspace_layer { // LOWER + SPACEUP = CYBERSPACE
       label = "cyberspace";
+      bindings = <
+      //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
+      //&trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &kp F
+        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
+        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
+        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
+                                                                                &trans            &trans            &trans            &trans            &trans            &trans
+        >;
+    };
+    slipspace_layer { // SPACEDOWN + LOWER = SLIPSPACE
+      label = "slipspace";
+      bindings = <
+      //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
+      //&trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &kp F
+        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
+        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
+        &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &trans
+                                                                                &trans            &trans            &trans            &trans            &trans            &trans
+        >;
+    };
+    foldspace_layer { // SPACEUP + RAISE = FOLDSPACE
+      label = "foldspace";
       bindings = <
       //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
       //&trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &kp F
