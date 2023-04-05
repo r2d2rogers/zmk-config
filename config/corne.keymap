@@ -103,7 +103,7 @@
       then-layer = <_SL>;
     };
     foldspace_layer {
-      if-layers = <_AJ _SU;
+      if-layers = <_AJ _SU>;
       then-layer = <_FS>;
     };
     blackhole_layer {
