@@ -13,27 +13,27 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
 
-#define _DF  0 //  0 DEFAULT
-#define _GM  1 //  1 GAMING
-#define _GA  2 //  2 GAMMA
-#define _DE  3 //  3 DELTA
-#define _EP  4 //  4 EPSILON
-#define _ZE  5 //  5 ZETA
-#define _SD  6 //  6 SPACEDOWN
-#define _SU  7 //  7 SPACEUP
-#define _LW  8 //  8 LOWER
-#define _RE  9 //  9 RAISE
-#define _RS 10 // 10 REALSPACE
-#define _AJ 11 // 11 ADJUST
-#define _SS 12 // 12 SUBSPACE
-#define _HS 13 // 13 HYPERSPACE
-#define _KS 14 // 14 KNOWNSPACE
-#define _CS 15 // 15 CYBERSPACE
-#define _SL 16 // 16 SLIPSPACE
-#define _FS 17 // 17 FOLDSPACE
-#define _BH 18 // 18 BLACKHOLE
-#define _WH 19 // 19 WORMHOLE
-#define _WP 20 // 20 WARP
+#define _DF  0
+#define _GM  1
+#define _GA  2
+#define _DE  3
+#define _EP  4
+#define _ZE  5
+#define _SD  6
+#define _SU  7
+#define _LW  8
+#define _RE  9
+#define _RS 10
+#define _AJ 11
+#define _SS 12
+#define _HS 13
+#define _KS 14
+#define _CS 15
+#define _SL 16
+#define _FS 17
+#define _BH 18
+#define _WH 19
+#define _WP 20
 
 &spi1 {
   compatible = "nordic,nrf-spim";
