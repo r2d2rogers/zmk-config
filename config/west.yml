@@ -13,7 +13,7 @@ manifest:
       remote: r2d2rogers
       revision: main
       import: app/west.yml
-    - name: split-encoder
+    - name: zmk
       remote: petejohanson
       revision: stephen/split-encoder
         # remote: DiogoDoreto
