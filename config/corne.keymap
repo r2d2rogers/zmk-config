@@ -238,7 +238,7 @@
       //&trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans            &trans
       //&trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &kp N5
         &trans            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &kp N5
-        &reset            &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &reset
+        &sys_reset        &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &sys_reset
         &bootloader       &trans            &trans            &trans            &trans            &trans                                                &trans            &trans            &trans            &trans            &trans            &bootloader
                                                                                 &trans            &trans            &trans            &trans            &trans            &trans
         >;
