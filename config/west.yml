@@ -6,12 +6,18 @@ manifest:
       url-base: https://github.com/r2d2rogers
     - name: DiogoDoreto
       url-base: https://github.com/DiogoDoreto
+    - name: petejohanson
+      url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      #remote: DiogoDoreto
       remote: r2d2rogers
-      #revision: waterfowl-encoders
       revision: main
+      import: app/west.yml
+    - name: split-encoder
+      remote: petejohanson
+      revision: stephen/split-encoder
+        # remote: DiogoDoreto
+        # revision: waterfowl-encoders
       import: app/west.yml
   self:
     path: config
