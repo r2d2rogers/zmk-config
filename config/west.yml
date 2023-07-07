@@ -10,14 +10,12 @@ manifest:
       url-base: https://github.com/petejohanson
   projects:
     - name: zmk
-      remote: r2d2rogers
-      revision: main
-      import: app/west.yml
-    - name: zmk
+      # remote: r2d2rogers
+      # revision: main
       remote: petejohanson
       revision: stephen/split-encoder
-        # remote: DiogoDoreto
-        # revision: waterfowl-encoders
+      # remote: DiogoDoreto
+      # revision: waterfowl-encoders
       import: app/west.yml
   self:
     path: config
