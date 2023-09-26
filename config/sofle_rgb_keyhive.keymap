@@ -42,7 +42,7 @@
 / {
 
   behaviors {
-    lt: behavior_layer_tap { quick-tap-ms = <180>; };
+    lt: behavior_layer_tap { tapping-term-ms = <180>; };
     mt: behavior_mod_tap { tapping-term-ms = <180>; };
   };
 
