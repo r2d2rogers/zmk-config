@@ -13,27 +13,27 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
 
-#define DF  0
-#define GM  1
-#define GA  2
-#define DE  3
-#define EP  4
-#define ZE  5
-#define SD  6
-#define SU  7
-#define LW  8
-#define RE  9
-#define RS 10
-#define AJ 11
-#define SS 12
-#define HS 13
-#define KS 14
-#define CS 15
-#define SL 16
-#define FS 17
-#define BH 18
-#define WH 19
-#define WP 20
+#define _DF  0
+#define _GM  1
+#define _GA  2
+#define _DE  3
+#define _EP  4
+#define _ZE  5
+#define _SD  6
+#define _SU  7
+#define _LW  8
+#define _RE  9
+#define _RS 10
+#define _AJ 11
+#define _SS 12
+#define _HS 13
+#define _KS 14
+#define _CS 15
+#define _SL 16
+#define _FS 17
+#define _BH 18
+#define _WH 19
+#define _WP 20
 
 &spi3 {
   compatible = "nordic,nrf-spim";
@@ -125,109 +125,109 @@
     default_layer {
       label = "default";
       bindings = <
-//    ┌───────────────┬───────┬───────┬──────────┬──────────────┬─────────────┬────────────┬──────────────┬───────────┬─────────┬──────────┬───────────┐
-//    │    &kp TAB    │ &kp Q │ &kp W │  &kp E   │    &kp R     │    &kp T    │   &kp Y    │    &kp U     │   &kp I   │  &kp O  │  &kp P   │ &kp BSLH  │
-//    ├───────────────┼───────┼───────┼──────────┼──────────────┼─────────────┼────────────┼──────────────┼───────────┼─────────┼──────────┼───────────┤
-//    │ &mt LCTRL ESC │ &kp A │ &kp S │  &kp D   │    &kp F     │    &kp G    │   &kp H    │    &kp J     │   &kp K   │  &kp L  │ &kp SEMI │  &kp SQT  │
-//    ├───────────────┼───────┼───────┼──────────┼──────────────┼─────────────┼────────────┼──────────────┼───────────┼─────────┼──────────┼───────────┤
-//    │   &kp LSHFT   │ &kp Z │ &kp X │  &kp C   │    &kp V     │    &kp B    │   &kp N    │    &kp M     │ &kp COMMA │ &kp DOT │ &kp FSLH │ &kp RSHFT │
-//    └───────────────┴───────┴───────┼──────────┼──────────────┼─────────────┼────────────┼──────────────┼───────────┼─────────┴──────────┴───────────┘
-//                                    │ &kp LGUI │ &lt SD SPACE │ &lt LW BSPC │ &lt RE RET │ &lt SU SPACE │ &kp RALT  │                                 
-//                                    └──────────┴──────────────┴─────────────┴────────────┴──────────────┴───────────┘                                 
-  &kp TAB         &kp Q   &kp W   &kp E      &kp R          &kp T         &kp Y        &kp U          &kp I       &kp O     &kp P      &kp BSLH 
-  &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F          &kp G         &kp H        &kp J          &kp K       &kp L     &kp SEMI   &kp SQT  
-  &kp LSHFT       &kp Z   &kp X   &kp C      &kp V          &kp B         &kp N        &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
-                                  &kp LGUI   &lt SD SPACE   &lt LW BSPC   &lt RE RET   &lt SU SPACE   &kp RALT                                  
+//    ┌───────────────┬───────┬───────┬──────────┬───────────────┬──────────────┬─────────────┬───────────────┬───────────┬─────────┬──────────┬───────────┐
+//    │    &kp TAB    │ &kp Q │ &kp W │  &kp E   │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │   &kp I   │  &kp O  │  &kp P   │ &kp BSLH  │
+//    ├───────────────┼───────┼───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┼──────────┼───────────┤
+//    │ &mt LCTRL ESC │ &kp A │ &kp S │  &kp D   │     &kp F     │    &kp G     │    &kp H    │     &kp J     │   &kp K   │  &kp L  │ &kp SEMI │  &kp SQT  │
+//    ├───────────────┼───────┼───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┼──────────┼───────────┤
+//    │   &kp LSHFT   │ &kp Z │ &kp X │  &kp C   │     &kp V     │    &kp B     │    &kp N    │     &kp M     │ &kp COMMA │ &kp DOT │ &kp FSLH │ &kp RSHFT │
+//    └───────────────┴───────┴───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┴──────────┴───────────┘
+//                                    │ &kp LGUI │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │ &kp RALT  │                                 
+//                                    └──────────┴───────────────┴──────────────┴─────────────┴───────────────┴───────────┘                                 
+  &kp TAB         &kp Q   &kp W   &kp E      &kp R           &kp T          &kp Y         &kp U           &kp I       &kp O     &kp P      &kp BSLH 
+  &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F           &kp G          &kp H         &kp J           &kp K       &kp L     &kp SEMI   &kp SQT  
+  &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
+                                  &kp LGUI   &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                  
         >;
     };
     game_layer {
       label = "game";
       bindings = <
-//    ┌───────────────┬───────┬───────┬──────────┬──────────────┬─────────────┬────────────┬──────────────┬───────────┬─────────┬──────────┬───────────┐
-//    │    &kp TAB    │ &kp Q │ &kp W │  &kp E   │    &kp R     │    &kp T    │   &kp Y    │    &kp U     │   &kp I   │  &kp O  │  &kp P   │ &kp BSLH  │
-//    ├───────────────┼───────┼───────┼──────────┼──────────────┼─────────────┼────────────┼──────────────┼───────────┼─────────┼──────────┼───────────┤
-//    │ &mt LCTRL ESC │ &kp A │ &kp S │  &kp D   │    &kp F     │    &kp G    │   &kp H    │    &kp J     │   &kp K   │  &kp L  │ &kp SEMI │  &kp SQT  │
-//    ├───────────────┼───────┼───────┼──────────┼──────────────┼─────────────┼────────────┼──────────────┼───────────┼─────────┼──────────┼───────────┤
-//    │   &kp LSHFT   │ &kp Z │ &kp X │  &kp C   │    &kp V     │    &kp B    │   &kp N    │    &kp M     │ &kp COMMA │ &kp DOT │ &kp FSLH │ &kp RSHFT │
-//    └───────────────┴───────┴───────┼──────────┼──────────────┼─────────────┼────────────┼──────────────┼───────────┼─────────┴──────────┴───────────┘
-//                                    │ &kp LGUI │ &lt SD SPACE │ &lt LW BSPC │ &lt RE RET │ &lt SU SPACE │ &kp RALT  │                                 
-//                                    └──────────┴──────────────┴─────────────┴────────────┴──────────────┴───────────┘                                 
-  &kp TAB         &kp Q   &kp W   &kp E      &kp R          &kp T         &kp Y        &kp U          &kp I       &kp O     &kp P      &kp BSLH 
-  &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F          &kp G         &kp H        &kp J          &kp K       &kp L     &kp SEMI   &kp SQT  
-  &kp LSHFT       &kp Z   &kp X   &kp C      &kp V          &kp B         &kp N        &kp M          &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
-                                  &kp LGUI   &lt SD SPACE   &lt LW BSPC   &lt RE RET   &lt SU SPACE   &kp RALT                                  
+//    ┌───────────────┬───────┬───────┬──────────┬───────────────┬──────────────┬─────────────┬───────────────┬───────────┬─────────┬──────────┬───────────┐
+//    │    &kp TAB    │ &kp Q │ &kp W │  &kp E   │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │   &kp I   │  &kp O  │  &kp P   │ &kp BSLH  │
+//    ├───────────────┼───────┼───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┼──────────┼───────────┤
+//    │ &mt LCTRL ESC │ &kp A │ &kp S │  &kp D   │     &kp F     │    &kp G     │    &kp H    │     &kp J     │   &kp K   │  &kp L  │ &kp SEMI │  &kp SQT  │
+//    ├───────────────┼───────┼───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┼──────────┼───────────┤
+//    │   &kp LSHFT   │ &kp Z │ &kp X │  &kp C   │     &kp V     │    &kp B     │    &kp N    │     &kp M     │ &kp COMMA │ &kp DOT │ &kp FSLH │ &kp RSHFT │
+//    └───────────────┴───────┴───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┴──────────┴───────────┘
+//                                    │ &kp LGUI │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │ &kp RALT  │                                 
+//                                    └──────────┴───────────────┴──────────────┴─────────────┴───────────────┴───────────┘                                 
+  &kp TAB         &kp Q   &kp W   &kp E      &kp R           &kp T          &kp Y         &kp U           &kp I       &kp O     &kp P      &kp BSLH 
+  &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F           &kp G          &kp H         &kp J           &kp K       &kp L     &kp SEMI   &kp SQT  
+  &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
+                                  &kp LGUI   &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                  
         >;
     };
     gamma_layer {
       label = "gamma";
       bindings = <
-//    ┌───────────────┬────────────┬────────────┬─────────────┬──────────────┬─────────────┬────────────┬──────────────┬─────────────┬────────────┬───────────────┬───────────┐
-//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │    &kp R     │    &kp T    │   &kp Y    │    &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │ &mt LSHFT F  │    &kp G    │   &kp H    │ &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │    &kp V     │    &kp B    │   &kp N    │    &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
-//    └───────────────┴────────────┴────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt SD SPACE │ &lt LW BSPC │ &lt RE RET │ &lt SU SPACE │  &kp RALT   │                                         
-//                                              └─────────────┴──────────────┴─────────────┴────────────┴──────────────┴─────────────┘                                         
-  &kp TAB         &kp Q        &kp W        &kp E         &kp R          &kp T         &kp Y        &kp U          &kp I         &kp O        &kp P           &kp BSLH 
-  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F    &kp G         &kp H        &mt RSHFT J    &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
-  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V          &kp B         &kp N        &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt SD SPACE   &lt LW BSPC   &lt RE RET   &lt SU SPACE   &kp RALT                                            
+//    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
+//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │  &mt LSHFT F  │    &kp G     │    &kp H    │  &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
+//    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
+//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+  &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
+  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
+  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
         >;
     };
     delta_layer {
       label = "delta";
       bindings = <
-//    ┌───────────────┬────────────┬────────────┬─────────────┬──────────────┬─────────────┬────────────┬──────────────┬─────────────┬────────────┬───────────────┬───────────┐
-//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │    &kp R     │    &kp T    │   &kp Y    │    &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │ &mt LSHFT F  │    &kp G    │   &kp H    │ &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │    &kp V     │    &kp B    │   &kp N    │    &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
-//    └───────────────┴────────────┴────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt SD SPACE │ &lt LW BSPC │ &lt RE RET │ &lt SU SPACE │  &kp RALT   │                                         
-//                                              └─────────────┴──────────────┴─────────────┴────────────┴──────────────┴─────────────┘                                         
-  &kp TAB         &kp Q        &kp W        &kp E         &kp R          &kp T         &kp Y        &kp U          &kp I         &kp O        &kp P           &kp BSLH 
-  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F    &kp G         &kp H        &mt RSHFT J    &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
-  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V          &kp B         &kp N        &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt SD SPACE   &lt LW BSPC   &lt RE RET   &lt SU SPACE   &kp RALT                                            
+//    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
+//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │  &mt LSHFT F  │    &kp G     │    &kp H    │  &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
+//    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
+//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+  &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
+  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
+  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
         >;
     };
     epsilon_layer {
       label = "epsilon";
       bindings = <
-//    ┌───────────────┬────────────┬────────────┬─────────────┬──────────────┬─────────────┬────────────┬──────────────┬─────────────┬────────────┬───────────────┬───────────┐
-//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │    &kp R     │    &kp T    │   &kp Y    │    &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │ &mt LSHFT F  │    &kp G    │   &kp H    │ &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │    &kp V     │    &kp B    │   &kp N    │    &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
-//    └───────────────┴────────────┴────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt SD SPACE │ &lt LW BSPC │ &lt RE RET │ &lt SU SPACE │  &kp RALT   │                                         
-//                                              └─────────────┴──────────────┴─────────────┴────────────┴──────────────┴─────────────┘                                         
-  &kp TAB         &kp Q        &kp W        &kp E         &kp R          &kp T         &kp Y        &kp U          &kp I         &kp O        &kp P           &kp BSLH 
-  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F    &kp G         &kp H        &mt RSHFT J    &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
-  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V          &kp B         &kp N        &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt SD SPACE   &lt LW BSPC   &lt RE RET   &lt SU SPACE   &kp RALT                                            
+//    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
+//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │  &mt LSHFT F  │    &kp G     │    &kp H    │  &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
+//    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
+//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+  &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
+  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
+  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
         >;
     };
     zeta_layer {
       label = "zeta";
       bindings = <
-//    ┌───────────────┬────────────┬────────────┬─────────────┬──────────────┬─────────────┬────────────┬──────────────┬─────────────┬────────────┬───────────────┬───────────┐
-//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │    &kp R     │    &kp T    │   &kp Y    │    &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │ &mt LSHFT F  │    &kp G    │   &kp H    │ &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
-//    ├───────────────┼────────────┼────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┼───────────────┼───────────┤
-//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │    &kp V     │    &kp B    │   &kp N    │    &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
-//    └───────────────┴────────────┴────────────┼─────────────┼──────────────┼─────────────┼────────────┼──────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt SD SPACE │ &lt LW BSPC │ &lt RE RET │ &lt SU SPACE │  &kp RALT   │                                         
-//                                              └─────────────┴──────────────┴─────────────┴────────────┴──────────────┴─────────────┘                                         
-  &kp TAB         &kp Q        &kp W        &kp E         &kp R          &kp T         &kp Y        &kp U          &kp I         &kp O        &kp P           &kp BSLH 
-  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F    &kp G         &kp H        &mt RSHFT J    &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
-  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V          &kp B         &kp N        &kp M          &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt SD SPACE   &lt LW BSPC   &lt RE RET   &lt SU SPACE   &kp RALT                                            
+//    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
+//    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │ &mt LCTRL ESC │ &mt RGUI A │ &mt RALT S │ &mt RCTRL D │  &mt LSHFT F  │    &kp G     │    &kp H    │  &mt RSHFT J  │ &mt RCTRL K │ &mt RALT L │ &mt RGUI SEMI │  &kp SQT  │
+//    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
+//    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
+//    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
+//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+  &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
+  &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
+  &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
+                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
         >;
     };
     spacedown_layer {
