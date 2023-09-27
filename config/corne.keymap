@@ -75,7 +75,7 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
     realspace_layer {
-      if-layers = <SUL SDL>;
+      if-layers = <SDL SUL>;
       then-layer = <RSL>;
     };
     adjust_layer {
@@ -99,23 +99,23 @@
       then-layer = <CSL>;
     };
     slipspace_layer {
-      if-layers = <SDL AJL>;
+      if-layers = <SSL REL>;
       then-layer = <SLL>;
     };
     foldspace_layer {
-      if-layers = <AJL SUL>;
+      if-layers = <LWL HSL>;
       then-layer = <FSL>;
     };
     blackhole_layer {
-      if-layers = <SDL AJL>;
+      if-layers = <SSL SUL>;
       then-layer = <BHL>;
     };
     wormhole_layer {
-      if-layers = <SUL AJL>;
+      if-layers = <SDL HSL>;
       then-layer = <WHL>;
     };
     warp_layer {
-      if-layers = <RSL AJL>;
+      if-layers = <SSL HSL>;
       then-layer = <WPL>;
     };
   };
