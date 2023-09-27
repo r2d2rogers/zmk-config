@@ -13,27 +13,27 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/led/led.h>
 
-#define _DF  0
-#define _GM  1
-#define _GA  2
-#define _DE  3
-#define _EP  4
-#define _ZE  5
-#define _SD  6
-#define _SU  7
-#define _LW  8
-#define _RE  9
-#define _RS 10
-#define _AJ 11
-#define _SS 12
-#define _HS 13
-#define _KS 14
-#define _CS 15
-#define _SL 16
-#define _FS 17
-#define _BH 18
-#define _WH 19
-#define _WP 20
+#define DFL  0
+#define GML  1
+#define GAL  2
+#define DEL  3
+#define EPL  4
+#define ZEL  5
+#define SDL  6
+#define SUL  7
+#define LWL  8
+#define REL  9
+#define RSL 10
+#define AJL 11
+#define SSL 12
+#define HSL 13
+#define KSL 14
+#define CSL 15
+#define SLL 16
+#define FSL 17
+#define BHL 18
+#define WHL 19
+#define WPL 20
 
 &spi3 {
   compatible = "nordic,nrf-spim";
@@ -75,48 +75,48 @@
   conditional_layers {
     compatible = "zmk,conditional-layers";
     realspace_layer {
-      if-layers = <_SU _SD>;
-      then-layer = <_RS>;
+      if-layers = <SUL SDL>;
+      then-layer = <RSL>;
     };
     adjust_layer {
-      if-layers = <_LW _RE>;
-      then-layer = <_AJ>;
+      if-layers = <LWL REL>;
+      then-layer = <AJL>;
     };
     subspace_layer {
-      if-layers = <_SD _LW>;
-      then-layer = <_SS>;
+      if-layers = <SDL LWL>;
+      then-layer = <SSL>;
     };
     hyperspace_layer {
-      if-layers = <_SU _RE>;
-      then-layer = <_HS>;
+      if-layers = <SUL REL>;
+      then-layer = <HSL>;
     };
     knownspace_layer {
-      if-layers = <_SD _RE>;
-      then-layer = <_KS>;
+      if-layers = <SDL REL>;
+      then-layer = <KSL>;
     };
     cyberspace_layer {
-      if-layers = <_LW _SU>;
-      then-layer = <_CS>;
+      if-layers = <LWL SUL>;
+      then-layer = <CSL>;
     };
     slipspace_layer {
-      if-layers = <_SD _AJ>;
-      then-layer = <_SL>;
+      if-layers = <SDL AJL>;
+      then-layer = <SLL>;
     };
     foldspace_layer {
-      if-layers = <_AJ _SU>;
-      then-layer = <_FS>;
+      if-layers = <AJL SUL>;
+      then-layer = <FSL>;
     };
     blackhole_layer {
-      if-layers = <_SD _AJ>;
-      then-layer = <_BH>;
+      if-layers = <SDL AJL>;
+      then-layer = <BHL>;
     };
     wormhole_layer {
-      if-layers = <_SU _AJ>;
-      then-layer = <_WH>;
+      if-layers = <SUL AJL>;
+      then-layer = <WHL>;
     };
     warp_layer {
-      if-layers = <_RS _AJ>;
-      then-layer = <_WP>;
+      if-layers = <RSL AJL>;
+      then-layer = <WPL>;
     };
   };
 
@@ -132,12 +132,12 @@
 //    ├───────────────┼───────┼───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┼──────────┼───────────┤
 //    │   &kp LSHFT   │ &kp Z │ &kp X │  &kp C   │     &kp V     │    &kp B     │    &kp N    │     &kp M     │ &kp COMMA │ &kp DOT │ &kp FSLH │ &kp RSHFT │
 //    └───────────────┴───────┴───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┴──────────┴───────────┘
-//                                    │ &kp LGUI │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │ &kp RALT  │                                 
+//                                    │ &kp LGUI │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │ &kp RALT  │                                 
 //                                    └──────────┴───────────────┴──────────────┴─────────────┴───────────────┴───────────┘                                 
   &kp TAB         &kp Q   &kp W   &kp E      &kp R           &kp T          &kp Y         &kp U           &kp I       &kp O     &kp P      &kp BSLH 
   &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F           &kp G          &kp H         &kp J           &kp K       &kp L     &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
-                                  &kp LGUI   &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                  
+                                  &kp LGUI   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                  
         >;
     };
     game_layer {
@@ -150,12 +150,12 @@
 //    ├───────────────┼───────┼───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┼──────────┼───────────┤
 //    │   &kp LSHFT   │ &kp Z │ &kp X │  &kp C   │     &kp V     │    &kp B     │    &kp N    │     &kp M     │ &kp COMMA │ &kp DOT │ &kp FSLH │ &kp RSHFT │
 //    └───────────────┴───────┴───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┴──────────┴───────────┘
-//                                    │ &kp LGUI │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │ &kp RALT  │                                 
+//                                    │ &kp LGUI │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │ &kp RALT  │                                 
 //                                    └──────────┴───────────────┴──────────────┴─────────────┴───────────────┴───────────┘                                 
   &kp TAB         &kp Q   &kp W   &kp E      &kp R           &kp T          &kp Y         &kp U           &kp I       &kp O     &kp P      &kp BSLH 
   &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F           &kp G          &kp H         &kp J           &kp K       &kp L     &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
-                                  &kp LGUI   &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                  
+                                  &kp LGUI   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                  
         >;
     };
     gamma_layer {
@@ -168,12 +168,12 @@
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
 //    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
+                                            &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
     delta_layer {
@@ -186,12 +186,12 @@
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
 //    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
+                                            &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
     epsilon_layer {
@@ -204,12 +204,12 @@
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
 //    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
+                                            &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
     zeta_layer {
@@ -222,12 +222,12 @@
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
 //    │   &kp LSHFT   │   &kp Z    │   &kp X    │    &kp C    │     &kp V     │    &kp B     │    &kp N    │     &kp M     │  &kp COMMA  │  &kp DOT   │   &kp FSLH    │ &kp RSHFT │
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
-//                                              │  &kp LGUI   │ &lt _SD SPACE │ &lt _LW BSPC │ &lt _RE RET │ &lt _SU SPACE │  &kp RALT   │                                         
+//                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
-                                            &kp LGUI      &lt _SD SPACE   &lt _LW BSPC   &lt _RE RET   &lt _SU SPACE   &kp RALT                                            
+                                            &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
     spacedown_layer {
