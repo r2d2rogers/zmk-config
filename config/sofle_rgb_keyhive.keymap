@@ -35,12 +35,9 @@
 #define WPL 20
 
 &mt { tapping-term-ms = <180>; };
+&lt { quick-tap-ms = <180>; };
 
 / {
-
-  behaviors {
-    lt: behavior_layer_tap { quick-tap-ms = <180>; };
-  };
 
   conditional_layers {
     compatible = "zmk,conditional-layers";

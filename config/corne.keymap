@@ -62,15 +62,12 @@
 };
 
 &mt { tapping-term-ms = <180>; };
+&lt { quick-tap-ms = <180>; };
 
 / {
 
   chosen {
     zmk,underglow = &led_strip;
-  };
-
-  behaviors {
-    lt: behavior_layer_tap { quick-tap-ms = <180>; };
   };
 
   conditional_layers {
