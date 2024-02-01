@@ -16,7 +16,7 @@
 #define DFL  0
 #define GML  1
 #define GAL  2
-#define DEL  3
+#define DTL  3
 #define EPL  4
 #define ZEL  5
 #define SDL  6
@@ -122,7 +122,7 @@
 
   keymap {
     compatible = "zmk,keymap";
-    default_layer {
+    default_layer { // Default(DFL)
       label = "default";
       bindings = <
 //    ┌───────────────┬───────┬───────┬──────────┬───────────────┬──────────────┬─────────────┬───────────────┬───────────┬─────────┬──────────┬───────────┐
@@ -134,13 +134,14 @@
 //    └───────────────┴───────┴───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┴──────────┴───────────┘
 //                                    │ &kp LGUI │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │ &kp RALT  │                                 
 //                                    └──────────┴───────────────┴──────────────┴─────────────┴───────────────┴───────────┘                                 
+        //
   &kp TAB         &kp Q   &kp W   &kp E      &kp R           &kp T          &kp Y         &kp U           &kp I       &kp O     &kp P      &kp BSLH 
   &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F           &kp G          &kp H         &kp J           &kp K       &kp L     &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
                                   &kp LGUI   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                  
         >;
     };
-    game_layer {
+    game_layer { // Game(GML)
       label = "game";
       bindings = <
 //    ┌───────────────┬───────┬───────┬──────────┬───────────────┬──────────────┬─────────────┬───────────────┬───────────┬─────────┬──────────┬───────────┐
@@ -152,13 +153,14 @@
 //    └───────────────┴───────┴───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┴──────────┴───────────┘
 //                                    │ &kp LGUI │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │ &kp RALT  │                                 
 //                                    └──────────┴───────────────┴──────────────┴─────────────┴───────────────┴───────────┘                                 
+        //
   &kp TAB         &kp Q   &kp W   &kp E      &kp R           &kp T          &kp Y         &kp U           &kp I       &kp O     &kp P      &kp BSLH 
   &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F           &kp G          &kp H         &kp J           &kp K       &kp L     &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
                                   &kp LGUI   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                  
         >;
     };
-    gamma_layer {
+    gamma_layer { // Gamma(GAL)
       label = "gamma";
       bindings = <
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
@@ -170,13 +172,14 @@
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
 //                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+        //
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
-    delta_layer {
+    delta_layer { // Delta(DTL)
       label = "delta";
       bindings = <
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
@@ -188,13 +191,14 @@
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
 //                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+        //
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
-    epsilon_layer {
+    epsilon_layer { // Epsilon(EPL)
       label = "epsilon";
       bindings = <
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
@@ -206,13 +210,14 @@
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
 //                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+        //
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
-    zeta_layer {
+    zeta_layer { // Zeta(ZEL)
       label = "zeta";
       bindings = <
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
@@ -224,13 +229,14 @@
 //    └───────────────┴────────────┴────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┴───────────────┴───────────┘
 //                                              │  &kp LGUI   │ &lt SDL SPACE │ &lt LWL BSPC │ &lt REL RET │ &lt SUL SPACE │  &kp RALT   │                                         
 //                                              └─────────────┴───────────────┴──────────────┴─────────────┴───────────────┴─────────────┘                                         
+        //
   &kp TAB         &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y         &kp U           &kp I         &kp O        &kp P           &kp BSLH 
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
         >;
     };
-    spacedown_layer {
+    spacedown_layer { // SpaceDown(SDL)
       label = "spacedown";
       bindings = <
 //    ┌─────────────────┬───────────────────┬───────────────────┬─────────────────┬─────────────────┬──────────────┬──────────┬───────────┬───────────┬───────────┬────────┬──────────┐
@@ -242,13 +248,14 @@
 //    └─────────────────┴───────────────────┴───────────────────┼─────────────────┼─────────────────┼──────────────┼──────────┼───────────┼───────────┼───────────┴────────┴──────────┘
 //                                                              │     &trans      │     &trans      │    &trans    │  &trans  │  &trans   │  &trans   │                                
 //                                                              └─────────────────┴─────────────────┴──────────────┴──────────┴───────────┴───────────┘                                
+        //
   &rgb_ug RGB_TOG   &ext_power EP_TOG   &ext_power EP_OFF   &out OUT_USB      &out OUT_BLE      &out OUT_TOG   &trans     &trans      &trans      &trans      &trans   &kp BSPC
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI     &rgb_ug RGB_SAI     &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans         &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &trans  
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD     &rgb_ug RGB_SAD     &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans         &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans  
                                                             &trans            &trans            &trans         &trans     &trans      &trans                                   
         >;
     };
-    spaceup_layer {
+    spaceup_layer { // SpaceUp(SUL)
       label = "spaceup";
       bindings = <
 //    ┌─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬────────┬──────────┬───────────┬───────────┬───────────┬────────┬─────────────────┐
@@ -260,13 +267,14 @@
 //    └─────────────────┴─────────────────┴─────────────────┼─────────────────┼─────────────────┼────────┼──────────┼───────────┼───────────┼───────────┴────────┴─────────────────┘
 //                                                          │     &trans      │     &trans      │ &trans │  &trans  │  &trans   │  &trans   │                                       
 //                                                          └─────────────────┴─────────────────┴────────┴──────────┴───────────┴───────────┘                                       
+        //
   &rgb_ug RGB_TOG   &kp N1            &kp N2            &kp N3            &kp N4            &kp N5   &kp N6     &kp N7      &kp N8      &kp N9      &kp N0   &kp DEL        
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans   &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &rgb_ug RGB_TOG
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans         
                                                         &trans            &trans            &trans   &trans     &trans      &trans                                          
         >;
     };
-    lower_layer {
+    lower_layer { // Lower(LWL)
       label = "lower";
       bindings = <
 //    ┌─────────┬────────┬────────┬────────┬────────┬─────────┬──────────────┬────────┬────────┬────────┬──────────────┬─────────────────┐
@@ -278,13 +286,14 @@
 //    └─────────┴────────┴────────┼────────┼────────┼─────────┼──────────────┼────────┼────────┼────────┴──────────────┴─────────────────┘
 //                                │ &trans │ &trans │ &trans  │    &trans    │ &trans │ &trans │                                          
 //                                └────────┴────────┴─────────┴──────────────┴────────┴────────┘                                          
+        //
   &trans    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5    &kp N6         &kp N7   &kp N8   &kp N9   &kp N0         &kp BSPC       
   &kp F11   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &kp KP_PLUS    &kp N4   &kp N5   &kp N6   &kp KP_ENTER   &kp KP_MULTIPLY
   &kp F12   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &kp KP_MINUS   &kp N1   &kp N2   &kp N3   &kp KP_ENTER   &kp KP_DIVIDE  
                               &trans   &trans   &trans    &trans         &trans   &trans                                          
         >;
     };
-    raise_layer {
+    raise_layer { // Raise(REL)
       label = "raise";
       bindings = <
 //    ┌────────┬──────────┬────────┬──────────┬──────────┬───────────┬───────────┬───────────┬───────────┬──────────┬──────────┬──────────┐
@@ -296,13 +305,14 @@
 //    └────────┴──────────┴────────┼──────────┼──────────┼───────────┼───────────┼───────────┼───────────┼──────────┴──────────┴──────────┘
 //                                 │  &trans  │  &trans  │  &trans   │  &trans   │  &trans   │  &trans   │                                 
 //                                 └──────────┴──────────┴───────────┴───────────┴───────────┴───────────┘                                 
+        //
+  &trans   &trans     &trans   &trans     &trans     &trans      &kp TILDE   &kp UNDER   &kp PLUS    &kp LBRC   &kp RBRC   &kp PIPE
   &trans   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR   &kp BSPC
   &trans   &trans     &trans   &trans     &trans     &trans      &kp GRAVE   &kp MINUS   &kp EQUAL   &kp LBKT   &kp RBKT   &kp BSLH
-  &trans   &trans     &trans   &trans     &trans     &trans      &kp TILDE   &kp UNDER   &kp PLUS    &kp LBRC   &kp RBRC   &kp PIPE
                                &trans     &trans     &trans      &trans      &trans      &trans                                    
         >;
     };
-    realspace_layer { // SPACEDOWN + SPACEUP = REALSPACE
+    realspace_layer { // SpaceDown(SDL) + SpaceUp(SUL) = RealSpace(RSL)
       label = "realspace";
       bindings = <
 //    ┌─────────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬─────────────┐
@@ -314,13 +324,14 @@
 //    └─────────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴─────────────┘
 //                                    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                                
 //                                    └────────┴────────┴────────┴────────┴────────┴────────┘                                
+        //
   &trans        &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &kp N5     
   &sys_reset    &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &sys_reset 
   &bootloader   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &bootloader
                                   &trans   &trans   &trans   &trans   &trans   &trans                                
         >;
     };
-    adjust_layer { // LOWER + RAISE = ADJUST
+    adjust_layer { // Lower + Raise = Adjust(AJL)
       label = "adjust";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -332,13 +343,14 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &kp N6
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
         >;
     };
-    subspace_layer { // SPACEDOWN + LOWER = SUBSPACE
+    subspace_layer { // SpaceDown + Lower = Subspace(SSL)
       label = "subspace";
       bindings = <
 //    ┌─────────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -350,13 +362,14 @@
 //    └─────────────────┴──────────────┴──────────────┼──────────────┼──────────────┼──────────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                                                    │    &trans    │    &trans    │    &trans    │ &trans │ &trans │ &trans │                           
 //                                                    └──────────────┴──────────────┴──────────────┴────────┴────────┴────────┘                           
+        //
   &rgb_ug RGB_TOG   &trans         &trans         &out OUT_USB   &out OUT_BLE   &out OUT_TOG   &trans   &trans   &trans   &trans   &trans   &kp N7
   &bt BT_CLR        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &trans   &trans   &trans   &trans   &trans   &trans
   &trans            &bt BT_SEL 5   &bt BT_SEL 6   &bt BT_SEL 7   &bt BT_SEL 8   &bt BT_SEL 9   &trans   &trans   &trans   &trans   &trans   &trans
                                                   &trans         &trans         &trans         &trans   &trans   &trans                           
         >;
     };
-    hyperspace_layer { // SPACEUP + RAISE = HYPERSPACE
+    hyperspace_layer { // SpaceUp + Raise = HyperSpace(HSL)
       label = "hyperspace";
       bindings = <
 //    ┌─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬────────┬──────────┬───────────┬───────────┬───────────┬────────┬────────┐
@@ -368,13 +381,14 @@
 //    └─────────────────┴─────────────────┴─────────────────┼─────────────────┼─────────────────┼────────┼──────────┼───────────┼───────────┼───────────┴────────┴────────┘
 //                                                          │     &trans      │     &trans      │ &trans │  &trans  │  &trans   │  &trans   │                              
 //                                                          └─────────────────┴─────────────────┴────────┴──────────┴───────────┴───────────┘                              
+        //
   &rgb_ug RGB_TOG   &trans            &trans            &trans            &trans            &trans   &trans     &trans      &trans      &trans      &trans   &kp N8
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans   &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &trans
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans
                                                         &trans            &trans            &trans   &trans     &trans      &trans                                 
         >;
     };
-    knownspace_layer { // SPACEDOWN + RAISE = KNOWNSPACE
+    knownspace_layer { // SpaceDown + Raise = KnownSpace(KSL)
       label = "knownspace";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -386,13 +400,14 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
         >;
     };
-    cyberspace_layer { // LOWER + SPACEUP = CYBERSPACE
+    cyberspace_layer { // Lower + SpaceUp = CyberSpace(CSL)
       label = "cyberspace";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -404,13 +419,14 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
         >;
     };
-    slipspace_layer { // SPACEDOWN + LOWER = SLIPSPACE
+    slipspace_layer { // SubSpace + Raise = SlipSpace(SLL)
       label = "slipspace";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -422,13 +438,14 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
         >;
     };
-    foldspace_layer { // SPACEUP + RAISE = FOLDSPACE
+    foldspace_layer { // Lower + HyperSpace = FoldSpace(FSL)
       label = "foldspace";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -440,13 +457,14 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
         >;
     };
-    blackhole_layer { // SPACEDOWN + ADJUST = BLACKHOLE
+    blackhole_layer { // SlipSpace + SpaceUp = Blackhole(BHL)
       label = "blackhole";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -458,13 +476,14 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
         >;
     };
-    wormhole_layer { // SPACEUP + ADJUST = WORMHOLE
+    wormhole_layer { // SpaceDown + HyperSpace = Wormhole(WHL)
       label = "wormhole";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -476,13 +495,14 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
         >;
     };
-    warp_layer { // REALSPACE + ADJUST = WARP
+    warp_layer { // SubSpace + HyperSpace = Warp(WPL)
       label = "warp";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
@@ -494,6 +514,7 @@
 //    └────────┴────────┴────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┴────────┴────────┘
 //                               │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                           
 //                               └────────┴────────┴────────┴────────┴────────┴────────┘                           
+        //
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
