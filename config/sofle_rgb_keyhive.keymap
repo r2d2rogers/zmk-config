@@ -34,7 +34,7 @@
 #define WHL 19
 #define WPL 20
 
-&mt: { tapping-term-ms = <180>; };
+&mt { tapping-term-ms = <180>; };
 
 / {
 
