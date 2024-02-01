@@ -34,11 +34,12 @@
 #define WHL 19
 #define WPL 20
 
+&mt: { tapping-term-ms = <180>; };
+
 / {
 
   behaviors {
     lt: behavior_layer_tap { quick-tap-ms = <180>; };
-    mt: behavior_mod_tap { tapping-term-ms = <180>; };
   };
 
   conditional_layers {
