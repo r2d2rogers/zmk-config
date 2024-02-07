@@ -73,7 +73,7 @@
          compatible = "zmk,keymap";
 
          default_layer {
-             label = "default layer";
+             display-name = "default layer";
              bindings = <
                  &kp N1           &kp TAB      &kp F5         &kp LC(LA(C))    &kp LG(D)
                  &kp N2           &kp ESC      &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS
@@ -87,7 +87,7 @@
          };
 
          alternate_layer {
-             label = "alternate";
+             display-name = "alternate";
              bindings = <
                  &trans           &trans       &trans        &trans        &trans
                  &trans           &trans       &trans        &trans        &trans
@@ -101,7 +101,7 @@
          };
 
          lower_layer {
-             label = "lower";
+             display-name = "lower";
              bindings = <
                  &trans           &trans       &trans        &trans        &trans
                  &trans           &trans       &trans        &trans        &trans
@@ -115,7 +115,7 @@
          };
 
          raise_layer {
-             label = "raise";
+             display-name = "raise";
              bindings = <
                  &trans           &trans       &trans        &trans        &trans
                  &trans           &trans       &trans        &trans        &trans
@@ -129,7 +129,7 @@
          };
 
          adjust_layer {
-             label = "adjust";
+             display-name = "adjust";
              bindings = <
                  &trans           &rgb_ug RGB_EFF &out OUT_USB &out OUT_BLE  &out OUT_TOG
                  &trans           &trans          &trans       &trans        &bt BT_CLR
