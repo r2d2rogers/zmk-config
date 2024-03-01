@@ -47,7 +47,7 @@
   };
 &lt {
   quick-tap-ms = <180>;
-  flavor = "hold-preferred";
+  flavor = "balanced";
   };
 
 / {
