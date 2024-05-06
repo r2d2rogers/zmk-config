@@ -39,11 +39,11 @@
 &mt {
   tapping-term-ms = <180>;
   flavor = "tap-preferred";
-  };
+};
 &lt {
   quick-tap-ms = <180>;
   flavor = "balanced";
-  };
+};
 
 ZMK_CONDITIONAL_LAYER(SDL SUL, RSL)
 ZMK_CONDITIONAL_LAYER(LWL REL, AJL)
@@ -57,10 +57,7 @@ ZMK_CONDITIONAL_LAYER(SSL SUL, BHL)
 ZMK_CONDITIONAL_LAYER(SDL HSL, WHL)
 ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
 
-/ {
-  keymap {
-    compatible = "zmk,keymap";
-    ZMK_LAYER(default,
+ZMK_LAYER(default,
 //    ┌───────────────┬────────┬──────────┬──────────┬───────────┬───────────────┐                            ┌───────────────┬───────────┬───────────┬──────────┬──────────┬───────────┐
 //    │   &kp GRAVE   │ &kp N1 │  &kp N2  │  &kp N3  │  &kp N4   │    &kp N5     │                            │    &kp N6     │  &kp N7   │  &kp N8   │  &kp N9  │  &kp N0  │ &kp BSPC  │
 //    ├───────────────┼────────┼──────────┼──────────┼───────────┼───────────────┤                            ├───────────────┼───────────┼───────────┼──────────┼──────────┼───────────┤
@@ -81,10 +78,9 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
                            ,
         &inc_dec_kp C_VOL_UP C_VOL_DN
         &inc_dec_kp PG_UP PG_DN
-    )
-    game_layer { // Game(GML)
-      display-name = "game";
-      bindings = <
+)
+
+ZMK_LAYER(game,
 //    ┌───────────────┬────────┬──────────┬──────────┬───────────┬───────────────┐                            ┌───────────────┬───────────┬───────────┬──────────┬──────────┬───────────┐
 //    │   &kp GRAVE   │ &kp N1 │  &kp N2  │  &kp N3  │  &kp N4   │    &kp N5     │                            │    &kp N6     │  &kp N7   │  &kp N8   │  &kp N9  │  &kp N0  │ &kp BSPC  │
 //    ├───────────────┼────────┼──────────┼──────────┼───────────┼───────────────┤                            ├───────────────┼───────────┼───────────┼──────────┼──────────┼───────────┤
@@ -102,15 +98,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &kp A    &kp S      &kp D      &kp F       &kp G                                        &kp H           &kp J       &kp K       &kp L      &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z    &kp X      &kp C      &kp V       &kp B           &kp C_MUTE     &kp C_PP      &kp N           &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
                            &kp LGUI   &kp LALT   &kp LCTRL   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RCTRL   &kp RALT    &kp RGUI                       
-        >;
-      sensor-bindings = <
+                           ,
         &inc_dec_kp C_VOL_UP C_VOL_DN
         &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    gamma_layer { // Gamma(GAL)
-      display-name = "gamma";
-      bindings = <
+        )
+
+ZMK_LAYER(gamma,
 //    ┌───────────────┬────────┬──────────┬──────────┬───────────┬───────────────┐                            ┌───────────────┬───────────┬───────────┬──────────┬──────────┬───────────┐
 //    │   &kp GRAVE   │ &kp N1 │  &kp N2  │  &kp N3  │  &kp N4   │    &kp N5     │                            │    &kp N6     │  &kp N7   │  &kp N8   │  &kp N9  │  &kp N0  │ &kp BSPC  │
 //    ├───────────────┼────────┼──────────┼──────────┼───────────┼───────────────┤                            ├───────────────┼───────────┼───────────┼──────────┼──────────┼───────────┤
@@ -128,15 +121,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &kp A    &kp S      &kp D      &kp F       &kp G                                        &kp H           &kp J       &kp K       &kp L      &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z    &kp X      &kp C      &kp V       &kp B           &kp C_MUTE     &kp C_PP      &kp N           &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
                            &kp LGUI   &kp LALT   &kp LCTRL   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RCTRL   &kp RALT    &kp RGUI                       
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    delta_layer { // Delta(DTL)
-      display-name = "delta";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(delta,
 //    ┌───────────────┬────────┬──────────┬──────────┬───────────┬───────────────┐                            ┌───────────────┬───────────┬───────────┬──────────┬──────────┬───────────┐
 //    │   &kp GRAVE   │ &kp N1 │  &kp N2  │  &kp N3  │  &kp N4   │    &kp N5     │                            │    &kp N6     │  &kp N7   │  &kp N8   │  &kp N9  │  &kp N0  │ &kp BSPC  │
 //    ├───────────────┼────────┼──────────┼──────────┼───────────┼───────────────┤                            ├───────────────┼───────────┼───────────┼──────────┼──────────┼───────────┤
@@ -154,15 +144,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &kp A    &kp S      &kp D      &kp F       &kp G                                        &kp H           &kp J       &kp K       &kp L      &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z    &kp X      &kp C      &kp V       &kp B           &kp C_MUTE     &kp C_PP      &kp N           &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
                            &kp LGUI   &kp LALT   &kp LCTRL   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RCTRL   &kp RALT    &kp RGUI                       
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    epsilon_layer { // Epsilon(EPL)
-      display-name = "epsilon";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(epsilon,
 //    ┌───────────────┬────────┬──────────┬──────────┬───────────┬───────────────┐                            ┌───────────────┬───────────┬───────────┬──────────┬──────────┬───────────┐
 //    │   &kp GRAVE   │ &kp N1 │  &kp N2  │  &kp N3  │  &kp N4   │    &kp N5     │                            │    &kp N6     │  &kp N7   │  &kp N8   │  &kp N9  │  &kp N0  │ &kp BSPC  │
 //    ├───────────────┼────────┼──────────┼──────────┼───────────┼───────────────┤                            ├───────────────┼───────────┼───────────┼──────────┼──────────┼───────────┤
@@ -180,15 +167,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &kp A    &kp S      &kp D      &kp F       &kp G                                        &kp H           &kp J       &kp K       &kp L      &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z    &kp X      &kp C      &kp V       &kp B           &kp C_MUTE     &kp C_PP      &kp N           &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
                            &kp LGUI   &kp LALT   &kp LCTRL   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RCTRL   &kp RALT    &kp RGUI                       
-        >;
-      sensor-bindings = <
+,
         &inc_dec_kp C_VOL_UP C_VOL_DN
         &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    zeta_layer { // Zeta(ZEL)
-      display-name = "zeta";
-      bindings = <
+)
+
+ZMK_LAYER(zeta,
 //    ┌───────────────┬────────┬──────────┬──────────┬───────────┬───────────────┐                            ┌───────────────┬───────────┬───────────┬──────────┬──────────┬───────────┐
 //    │   &kp GRAVE   │ &kp N1 │  &kp N2  │  &kp N3  │  &kp N4   │    &kp N5     │                            │    &kp N6     │  &kp N7   │  &kp N8   │  &kp N9  │  &kp N0  │ &kp BSPC  │
 //    ├───────────────┼────────┼──────────┼──────────┼───────────┼───────────────┤                            ├───────────────┼───────────┼───────────┼──────────┼──────────┼───────────┤
@@ -206,15 +190,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &kp A    &kp S      &kp D      &kp F       &kp G                                        &kp H           &kp J       &kp K       &kp L      &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z    &kp X      &kp C      &kp V       &kp B           &kp C_MUTE     &kp C_PP      &kp N           &kp M       &kp COMMA   &kp DOT    &kp FSLH   &kp RSHFT
                            &kp LGUI   &kp LALT   &kp LCTRL   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RCTRL   &kp RALT    &kp RGUI                       
-        >;
-      sensor-bindings = <
+,
         &inc_dec_kp C_VOL_UP C_VOL_DN
         &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    spacedown_layer { // SpaceDown(SDL)
-      display-name = "spacedown";
-      bindings = <
+)
+
+ZMK_LAYER(spacedown,
 //    ┌─────────────────┬───────────────────┬───────────────────┬─────────────────┬─────────────────┬──────────────┐                 ┌──────────┬───────────┬───────────┬───────────┬────────┬──────────┐
 //    │ &rgb_ug RGB_TOG │ &ext_power EP_TOG │ &ext_power EP_OFF │  &out OUT_USB   │  &out OUT_BLE   │ &out OUT_TOG │                 │  &trans  │  &trans   │  &trans   │  &trans   │ &trans │ &kp BSPC │
 //    ├─────────────────┼───────────────────┼───────────────────┼─────────────────┼─────────────────┼──────────────┤                 ├──────────┼───────────┼───────────┼───────────┼────────┼──────────┤
@@ -232,15 +213,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI     &rgb_ug RGB_SAI     &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans                           &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &trans  
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD     &rgb_ug RGB_SAD     &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans         &trans   &trans   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans  
                                         &trans              &trans            &trans            &trans         &trans   &trans   &trans     &trans      &trans      &trans                       
-        >;
-      sensor-bindings = <
+,
         &inc_dec_kp C_VOL_UP C_VOL_DN
         &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    spaceup_layer { // SpaceUp(SUL)
-      display-name = "spaceup";
-      bindings = <
+)
+
+ZMK_LAYER(spaceup,
 //    ┌─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬────────┐                 ┌──────────┬───────────┬───────────┬───────────┬────────┬─────────────────┐
 //    │ &rgb_ug RGB_TOG │     &kp N1      │     &kp N2      │     &kp N3      │     &kp N4      │ &kp N5 │                 │  &kp N6  │  &kp N7   │  &kp N8   │  &kp N9   │ &kp N0 │     &kp DEL     │
 //    ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼────────┤                 ├──────────┼───────────┼───────────┼───────────┼────────┼─────────────────┤
@@ -258,15 +236,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans                     &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &rgb_ug RGB_TOG
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans   &trans   &trans   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans         
                                       &trans            &trans            &trans            &trans   &trans   &trans   &trans     &trans      &trans      &trans                              
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    lower_layer { // Lower(LWL)
-      display-name = "lower";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(lower,
 //    ┌─────────┬────────┬────────┬────────┬────────┬─────────┐                 ┌──────────────┬────────┬────────┬────────┬──────────────┬─────────────────┐
 //    │ &trans  │ &kp F1 │ &kp F2 │ &kp F3 │ &kp F4 │ &kp F5  │                 │    &kp F6    │ &kp F7 │ &kp F8 │ &kp F9 │   &kp F10    │     &kp F11     │
 //    ├─────────┼────────┼────────┼────────┼────────┼─────────┤                 ├──────────────┼────────┼────────┼────────┼──────────────┼─────────────────┤
@@ -284,15 +259,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &kp F11   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5                      &kp KP_PLUS    &kp N4   &kp N5   &kp N6   &kp KP_ENTER   &kp KP_MULTIPLY
   &kp F12   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &trans   &trans   &kp KP_MINUS   &kp N1   &kp N2   &kp N3   &kp KP_ENTER   &kp KP_DIVIDE  
                      &trans   &trans   &trans   &trans    &trans   &trans   &trans         &trans   &trans   &trans                                 
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    raise_layer { // Raise(REL)
-      display-name = "raise";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(raise,
 //    ┌────────────┬──────────────┬─────────────────┬───────────────────┬──────────────┬──────────────┐                       ┌───────────┬───────────┬───────────┬──────────┬──────────┬──────────┐
 //    │ &bt BT_CLR │ &bt BT_SEL 0 │  &bt BT_SEL 1   │   &bt BT_SEL 2    │ &bt BT_SEL 3 │ &bt BT_SEL 4 │                       │  &trans   │  &trans   │  &trans   │  &trans  │  &trans  │ &kp BSPC │
 //    ├────────────┼──────────────┼─────────────────┼───────────────────┼──────────────┼──────────────┤                       ├───────────┼───────────┼───────────┼──────────┼──────────┼──────────┤
@@ -310,15 +282,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans       &kp LALT       &kp LCTRL         &kp LSHFT           &trans         &kp CLCK                               &kp GRAVE   &kp MINUS   &kp EQUAL   &kp LBKT   &kp RBKT   &kp BSLH
   &trans       &kp K_UNDO     &kp K_CUT         &kp K_COPY          &kp K_PASTE    &trans         &out OUT_TOG   &trans   &kp TILDE   &kp UNDER   &kp PLUS    &kp LBRC   &kp RBRC   &kp PIPE
                               &rgb_ug RGB_TOG   &ext_power EP_TOG   &trans         &trans         &trans         &trans   &trans      &trans      &trans      &trans                        
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    realspace_layer { // SpaceDown(SDL) + SpaceUp(SUL) = RealSpace(RSL)
-      display-name = "realspace";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(realspace,
 //    ┌─────────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬─────────────┐
 //    │   &trans    │ &trans │ &trans │ &trans │ &trans │ &trans │                 │ &trans │ &trans │ &trans │ &trans │ &trans │   &kp N5    │
 //    ├─────────────┼────────┼────────┼────────┼────────┼────────┤                 ├────────┼────────┼────────┼────────┼────────┼─────────────┤
@@ -336,15 +305,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &sys_reset    &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &sys_reset 
   &bootloader   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &bootloader
                          &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                       
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    adjust_layer { // Lower + Raise = Adjust(AJL)
-      display-name = "adjust";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(adjust,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                 │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp N6 │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┤                 ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -362,15 +328,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    subspace_layer { // SpaceDown + Lower = Subspace(SSL)
-      display-name = "subspace";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(subspace,
 //    ┌─────────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 //    │     &trans      │    &trans    │    &trans    │    &trans    │    &trans    │    &trans    │                 │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp N7 │
 //    ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┤                 ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -388,15 +351,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &bt BT_CLR        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans            &bt BT_SEL 5   &bt BT_SEL 6   &bt BT_SEL 7   &bt BT_SEL 8   &bt BT_SEL 9   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                                    &trans         &trans         &trans         &trans         &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    hyperspace_layer { // SpaceUp + Raise = HyperSpace(HSL)
-      display-name = "hyperspace";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(hyperspace,
 //    ┌─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬────────┐                 ┌──────────┬───────────┬───────────┬───────────┬────────┬────────┐
 //    │     &trans      │     &trans      │     &trans      │     &trans      │     &trans      │ &trans │                 │  &trans  │  &trans   │  &trans   │  &trans   │ &trans │ &kp N8 │
 //    ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼────────┤                 ├──────────┼───────────┼───────────┼───────────┼────────┼────────┤
@@ -414,15 +374,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans                     &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &trans
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans   &trans   &trans   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans
                                       &trans            &trans            &trans            &trans   &trans   &trans   &trans     &trans      &trans      &trans                     
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    knownspace_layer { // SpaceDown + Raise = KnownSpace(KSL)
-      display-name = "knownspace";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(knownspace,
 //    ┌────────┬───────────────────┬───────────────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │      &trans       │      &trans       │ &trans │ &trans │ &trans │                 │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp B  │
 //    ├────────┼───────────────────┼───────────────────┼────────┼────────┼────────┤                 ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -440,15 +397,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans              &trans              &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans              &trans              &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                                &trans              &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    cyberspace_layer { // Lower + SpaceUp = CyberSpace(CSL)
-      display-name = "cyberspace";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(cyberspace,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                 │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp C  │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┤                 ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -466,15 +420,11 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
+        ,
         &inc_dec_kp C_VOL_UP C_VOL_DN
         &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    slipspace_layer { // SubSpace + Raise = SlipSpace(SLL)
-      display-name = "slipspace";
-      bindings = <
+        )
+ZMK_LAYER(slipspace,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                 │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp N9 │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┤                 ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -492,15 +442,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    foldspace_layer { // Lower + HyperSpace = FoldSpace(FSL)
-      display-name = "foldspace";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(foldspace,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                 │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp A  │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┤                 ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -518,13 +465,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    blackhole_layer { // SlipSpace + SpaceUp = Blackhole(BHL)
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(blackhole,
       display-name = "blackhole";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
@@ -544,13 +490,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    wormhole_layer { // SpaceDown + HyperSpace = Wormhole(WHL)
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(wormhole,
       display-name = "wormhole";
       bindings = <
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
@@ -570,15 +515,12 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
-        &inc_dec_kp C_VOL_UP C_VOL_DN
-        &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-    warp_layer { // SubSpace + HyperSpace = Warp(WPL)
-      display-name = "warp";
-      bindings = <
+,
+  &inc_dec_kp C_VOL_UP C_VOL_DN
+  &inc_dec_kp PG_UP PG_DN
+)
+
+ZMK_LAYER(warp,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┐                 ┌────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │                 │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp F  │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┤                 ├────────┼────────┼────────┼────────┼────────┼────────┤
@@ -596,11 +538,7 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans                     &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                     &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans                  
-        >;
-      sensor-bindings = <
+,
         &inc_dec_kp C_VOL_UP C_VOL_DN
         &inc_dec_kp PG_UP PG_DN
-        >;
-    };
-  };
-};
+)
