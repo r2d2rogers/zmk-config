@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: MIT
  */
 
+#include <zmk-helpers/helper.h>
+#include <zmk-helpers/key-labels/42.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
@@ -47,59 +49,22 @@
   };
 &lt {
   quick-tap-ms = <180>;
-  flavor = "balanced";
+  flavor = "tap-preferred";
   };
+
+ZMK_CONDITIONAL_LAYER(SDL, SUL, RSL)
+ZMK_CONDITIONAL_LAYER(LWL, REL, AJL)
+ZMK_CONDITIONAL_LAYER(SDL, LWL, SSL)
+ZMK_CONDITIONAL_LAYER(SUL, REL, HSL)
+ZMK_CONDITIONAL_LAYER(SDL, REL, KSL)
+ZMK_CONDITIONAL_LAYER(LWL, SUL, CSL)
+ZMK_CONDITIONAL_LAYER(SSL, REL, SLL)
+ZMK_CONDITIONAL_LAYER(LWL, HSL, FSL)
+ZMK_CONDITIONAL_LAYER(SSL, SUL, BHL)
+ZMK_CONDITIONAL_LAYER(SDL, HSL, WHL)
+ZMK_CONDITIONAL_LAYER(SSL, HSL, WPL)
 
 / {
-
-  conditional_layers {
-    compatible = "zmk,conditional-layers";
-    realspace_layer {
-      if-layers = <SDL SUL>;
-      then-layer = <RSL>;
-    };
-    adjust_layer {
-      if-layers = <LWL REL>;
-      then-layer = <AJL>;
-    };
-    subspace_layer {
-      if-layers = <SDL LWL>;
-      then-layer = <SSL>;
-    };
-    hyperspace_layer {
-      if-layers = <SUL REL>;
-      then-layer = <HSL>;
-    };
-    knownspace_layer {
-      if-layers = <SDL REL>;
-      then-layer = <KSL>;
-    };
-    cyberspace_layer {
-      if-layers = <LWL SUL>;
-      then-layer = <CSL>;
-    };
-    slipspace_layer {
-      if-layers = <SSL REL>;
-      then-layer = <SLL>;
-    };
-    foldspace_layer {
-      if-layers = <LWL HSL>;
-      then-layer = <FSL>;
-    };
-    blackhole_layer {
-      if-layers = <SSL SUL>;
-      then-layer = <BHL>;
-    };
-    wormhole_layer {
-      if-layers = <SDL HSL>;
-      then-layer = <WHL>;
-    };
-    warp_layer {
-      if-layers = <SSL HSL>;
-      then-layer = <WPL>;
-    };
-  };
-
   keymap {
     compatible = "zmk,keymap";
     default_layer { // Default(DFL)

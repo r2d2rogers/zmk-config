@@ -8,16 +8,27 @@ manifest:
       url-base: https://github.com/DiogoDoreto
     - name: petejohanson
       url-base: https://github.com/petejohanson
+    - name: urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: main
-      # remote: r2d2rogers
-      # revision: main
-      # remote: petejohanson
-      # revision: stephen/split-encoder
-      # remote: DiogoDoreto
-      # revision: waterfowl-encoders
       import: app/west.yml
+    # - name: r2d2rogers
+    #   remote: r2d2rogers
+    #   revision: main
+    #   import: app/west.yml
+    # - name: petejohanson
+    #   remote: petejohanson
+    #   revision: stephen/split-encoder
+    #   import: app/west.yml
+    # - name: DiogoDoreto
+    #   remote: DiogoDoreto
+    #   revision: waterfowl-encoders
+    #   import: app/west.yml
+    - name: zmk-helpers
+      remote: urob
+      revision: v2 # this will eventually become main
   self:
     path: config
