@@ -49,7 +49,7 @@
   };
 &lt {
   quick-tap-ms = <180>;
-  flavor = "tap-preferred";
+  flavor = "balanced";
   };
 
 ZMK_CONDITIONAL_LAYER(SDL SUL, RSL)
