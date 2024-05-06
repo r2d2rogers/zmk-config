@@ -83,9 +83,7 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
                                   &kp LGUI   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                  
     )
-    game_layer { // Game(GML)
-      display-name = "game";
-      bindings = <
+    ZMK_LAYER(game,
 //    ┌───────────────┬───────┬───────┬──────────┬───────────────┬──────────────┬─────────────┬───────────────┬───────────┬─────────┬──────────┬───────────┐
 //    │    &kp TAB    │ &kp Q │ &kp W │  &kp E   │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │   &kp I   │  &kp O  │  &kp P   │ &kp BSLH  │
 //    ├───────────────┼───────┼───────┼──────────┼───────────────┼──────────────┼─────────────┼───────────────┼───────────┼─────────┼──────────┼───────────┤
@@ -100,11 +98,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &kp A   &kp S   &kp D      &kp F           &kp G          &kp H         &kp J           &kp K       &kp L     &kp SEMI   &kp SQT  
   &kp LSHFT       &kp Z   &kp X   &kp C      &kp V           &kp B          &kp N         &kp M           &kp COMMA   &kp DOT   &kp FSLH   &kp RSHFT
                                   &kp LGUI   &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                  
-        >;
-    };
-    gamma_layer { // Gamma(GAL)
-      display-name = "gamma";
-      bindings = <
+                                  )
+    ZMK_LAYER(gamma,
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
 //    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
@@ -119,11 +114,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
-        >;
-    };
-    delta_layer { // Delta(DTL)
-      display-name = "delta";
-      bindings = <
+                                            )
+    ZMK_LAYER(delta,
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
 //    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
@@ -138,11 +130,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
-        >;
-    };
-    epsilon_layer { // Epsilon(EPL)
-      display-name = "epsilon";
-      bindings = <
+                                            )
+    ZMK_LAYER(epsilon,
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
 //    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
@@ -157,11 +146,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
-        >;
-    };
-    zeta_layer { // Zeta(ZEL)
-      display-name = "zeta";
-      bindings = <
+                                            )
+    ZMK_LAYER(zeta,
 //    ┌───────────────┬────────────┬────────────┬─────────────┬───────────────┬──────────────┬─────────────┬───────────────┬─────────────┬────────────┬───────────────┬───────────┐
 //    │    &kp TAB    │   &kp Q    │   &kp W    │    &kp E    │     &kp R     │    &kp T     │    &kp Y    │     &kp U     │    &kp I    │   &kp O    │     &kp P     │ &kp BSLH  │
 //    ├───────────────┼────────────┼────────────┼─────────────┼───────────────┼──────────────┼─────────────┼───────────────┼─────────────┼────────────┼───────────────┼───────────┤
@@ -176,11 +162,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &mt LCTRL ESC   &mt RGUI A   &mt RALT S   &mt RCTRL D   &mt LSHFT F     &kp G          &kp H         &mt RSHFT J     &mt RCTRL K   &mt RALT L   &mt RGUI SEMI   &kp SQT  
   &kp LSHFT       &kp Z        &kp X        &kp C         &kp V           &kp B          &kp N         &kp M           &kp COMMA     &kp DOT      &kp FSLH        &kp RSHFT
                                             &kp LGUI      &lt SDL SPACE   &lt LWL BSPC   &lt REL RET   &lt SUL SPACE   &kp RALT                                            
-        >;
-    };
-    spacedown_layer { // SpaceDown(SDL)
-      display-name = "spacedown";
-      bindings = <
+                                            )
+    ZMK_LAYER(spacedown,
 //    ┌─────────────────┬───────────────────┬───────────────────┬─────────────────┬─────────────────┬──────────────┬──────────┬───────────┬───────────┬───────────┬────────┬──────────┐
 //    │ &rgb_ug RGB_TOG │ &ext_power EP_TOG │ &ext_power EP_OFF │  &out OUT_USB   │  &out OUT_BLE   │ &out OUT_TOG │  &trans  │  &trans   │  &trans   │  &trans   │ &trans │ &kp BSPC │
 //    ├─────────────────┼───────────────────┼───────────────────┼─────────────────┼─────────────────┼──────────────┼──────────┼───────────┼───────────┼───────────┼────────┼──────────┤
@@ -195,11 +178,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI     &rgb_ug RGB_SAI     &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans         &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &trans  
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD     &rgb_ug RGB_SAD     &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans         &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans  
                                                             &trans            &trans            &trans         &trans     &trans      &trans                                   
-        >;
-    };
-    spaceup_layer { // SpaceUp(SUL)
-      display-name = "spaceup";
-      bindings = <
+    )
+    ZMK_LAYER(spaceup,
 //    ┌─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬────────┬──────────┬───────────┬───────────┬───────────┬────────┬─────────────────┐
 //    │ &rgb_ug RGB_TOG │     &kp N1      │     &kp N2      │     &kp N3      │     &kp N4      │ &kp N5 │  &kp N6  │  &kp N7   │  &kp N8   │  &kp N9   │ &kp N0 │     &kp DEL     │
 //    ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼────────┼──────────┼───────────┼───────────┼───────────┼────────┼─────────────────┤
@@ -214,11 +194,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans   &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &rgb_ug RGB_TOG
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans         
                                                         &trans            &trans            &trans   &trans     &trans      &trans                                          
-        >;
-    };
-    lower_layer { // Lower(LWL)
-      display-name = "lower";
-      bindings = <
+        )
+    ZMK_LAYER(lower,
 //    ┌─────────┬────────┬────────┬────────┬────────┬─────────┬──────────────┬────────┬────────┬────────┬──────────────┬─────────────────┐
 //    │ &trans  │ &kp N1 │ &kp N2 │ &kp N3 │ &kp N4 │ &kp N5  │    &kp N6    │ &kp N7 │ &kp N8 │ &kp N9 │    &kp N0    │    &kp BSPC     │
 //    ├─────────┼────────┼────────┼────────┼────────┼─────────┼──────────────┼────────┼────────┼────────┼──────────────┼─────────────────┤
@@ -233,11 +210,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &kp F11   &kp F1   &kp F2   &kp F3   &kp F4   &kp F5    &kp KP_PLUS    &kp N4   &kp N5   &kp N6   &kp KP_ENTER   &kp KP_MULTIPLY
   &kp F12   &kp F6   &kp F7   &kp F8   &kp F9   &kp F10   &kp KP_MINUS   &kp N1   &kp N2   &kp N3   &kp KP_ENTER   &kp KP_DIVIDE  
                               &trans   &trans   &trans    &trans         &trans   &trans                                          
-        >;
-    };
-    raise_layer { // Raise(REL)
-      display-name = "raise";
-      bindings = <
+)
+    ZMK_LAYER(raise,
 //    ┌────────┬──────────┬────────┬──────────┬──────────┬───────────┬───────────┬───────────┬───────────┬──────────┬──────────┬──────────┐
 //    │ &trans │  &trans  │ &trans │  &trans  │  &trans  │  &trans   │ &kp TILDE │ &kp UNDER │ &kp PLUS  │ &kp LBRC │ &kp RBRC │ &kp PIPE │
 //    ├────────┼──────────┼────────┼──────────┼──────────┼───────────┼───────────┼───────────┼───────────┼──────────┼──────────┼──────────┤
@@ -252,11 +226,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &kp EXCL   &kp AT   &kp HASH   &kp DLLR   &kp PRCNT   &kp CARET   &kp AMPS    &kp ASTRK   &kp LPAR   &kp RPAR   &kp BSPC
   &trans   &trans     &trans   &trans     &trans     &trans      &kp GRAVE   &kp MINUS   &kp EQUAL   &kp LBKT   &kp RBKT   &kp BSLH
                                &trans     &trans     &trans      &trans      &trans      &trans                                    
-        >;
-    };
-    realspace_layer { // SpaceDown(SDL) + SpaceUp(SUL) = RealSpace(RSL)
-      display-name = "realspace";
-      bindings = <
+)
+    (ZMK_LAYER(realspace,
 //    ┌─────────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬─────────────┐
 //    │   &trans    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │   &kp N5    │
 //    ├─────────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼─────────────┤
@@ -271,11 +242,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &sys_reset    &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &sys_reset 
   &bootloader   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &bootloader
                                   &trans   &trans   &trans   &trans   &trans   &trans                                
-        >;
-    };
-    adjust_layer { // Lower + Raise = Adjust(AJL)
-      display-name = "adjust";
-      bindings = <
+                                  )
+    ZMK_LAYER(adjust,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp N6 │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -290,11 +258,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
-    };
-    subspace_layer { // SpaceDown + Lower = Subspace(SSL)
-      display-name = "subspace";
-      bindings = <
+                             )
+    ZMK_LAYER(subspace,
 //    ┌─────────────────┬──────────────┬──────────────┬──────────────┬──────────────┬──────────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &rgb_ug RGB_TOG │    &trans    │    &trans    │ &out OUT_USB │ &out OUT_BLE │ &out OUT_TOG │ &trans │ &trans │ &trans │ &trans │ &trans │ &kp N7 │
 //    ├─────────────────┼──────────────┼──────────────┼──────────────┼──────────────┼──────────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -309,11 +274,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &bt BT_CLR        &bt BT_SEL 0   &bt BT_SEL 1   &bt BT_SEL 2   &bt BT_SEL 3   &bt BT_SEL 4   &trans   &trans   &trans   &trans   &trans   &trans
   &trans            &bt BT_SEL 5   &bt BT_SEL 6   &bt BT_SEL 7   &bt BT_SEL 8   &bt BT_SEL 9   &trans   &trans   &trans   &trans   &trans   &trans
                                                   &trans         &trans         &trans         &trans   &trans   &trans                           
-        >;
-    };
-    hyperspace_layer { // SpaceUp + Raise = HyperSpace(HSL)
-      display-name = "hyperspace";
-      bindings = <
+        )
+    ZMK_LAYER(hyperspace,
 //    ┌─────────────────┬─────────────────┬─────────────────┬─────────────────┬─────────────────┬────────┬──────────┬───────────┬───────────┬───────────┬────────┬────────┐
 //    │ &rgb_ug RGB_TOG │     &trans      │     &trans      │     &trans      │     &trans      │ &trans │  &trans  │  &trans   │  &trans   │  &trans   │ &trans │ &kp N8 │
 //    ├─────────────────┼─────────────────┼─────────────────┼─────────────────┼─────────────────┼────────┼──────────┼───────────┼───────────┼───────────┼────────┼────────┤
@@ -328,11 +290,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &rgb_ug RGB_EFF   &rgb_ug RGB_HUI   &rgb_ug RGB_SAI   &rgb_ug RGB_BRI   &rgb_ug RGB_SPI   &trans   &kp LEFT   &kp DOWN    &kp UP      &kp RIGHT   &trans   &trans
   &rgb_ug RGB_EFR   &rgb_ug RGB_HUD   &rgb_ug RGB_SAD   &rgb_ug RGB_BRD   &rgb_ug RGB_SPD   &trans   &kp HOME   &kp PG_DN   &kp PG_UP   &kp END     &trans   &trans
                                                         &trans            &trans            &trans   &trans     &trans      &trans                                 
-        >;
-    };
-    knownspace_layer { // SpaceDown + Raise = KnownSpace(KSL)
-      display-name = "knownspace";
-      bindings = <
+)
+    ZMK_LAYER(knownspace,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -347,11 +306,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
-    };
-    cyberspace_layer { // Lower + SpaceUp = CyberSpace(CSL)
-      display-name = "cyberspace";
-      bindings = <
+    )
+    ZMK_LAYER(cyberspace,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -366,11 +322,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
-    };
-    slipspace_layer { // SubSpace + Raise = SlipSpace(SLL)
-      display-name = "slipspace";
-      bindings = <
+        )
+    ZMK_LAYER(slipspace,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -385,11 +338,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
-    };
-    foldspace_layer { // Lower + HyperSpace = FoldSpace(FSL)
-      display-name = "foldspace";
-      bindings = <
+        )
+    ZMK_LAYER(foldspace,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -404,11 +354,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
-    };
-    blackhole_layer { // SlipSpace + SpaceUp = Blackhole(BHL)
-      display-name = "blackhole";
-      bindings = <
+        )
+    ZMK_LAYER(blackhole,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -423,11 +370,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
-    };
-    wormhole_layer { // SpaceDown + HyperSpace = Wormhole(WHL)
-      display-name = "wormhole";
-      bindings = <
+                             )
+    ZMK_LAYER(wormhole,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -442,11 +386,8 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
-    };
-    warp_layer { // SubSpace + HyperSpace = Warp(WPL)
-      display-name = "warp";
-      bindings = <
+    )
+    ZMK_LAYER(warp,
 //    ┌────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┬────────┐
 //    │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │ &trans │
 //    ├────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┼────────┤
@@ -461,7 +402,7 @@ ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans   &trans
                              &trans   &trans   &trans   &trans   &trans   &trans                           
-        >;
+        )
     };
   };
 };
