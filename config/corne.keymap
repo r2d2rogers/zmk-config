@@ -52,17 +52,17 @@ led_strip: ws2812@0 {
   flavor = "balanced";
 };
 
-ZMK_CONDITIONAL_LAYER(SDL SUL, RSL)
-ZMK_CONDITIONAL_LAYER(LWL REL, AJL)
-ZMK_CONDITIONAL_LAYER(SDL LWL, SSL)
-ZMK_CONDITIONAL_LAYER(SUL REL, HSL)
-ZMK_CONDITIONAL_LAYER(SDL REL, KSL)
-ZMK_CONDITIONAL_LAYER(LWL SUL, CSL)
-ZMK_CONDITIONAL_LAYER(SSL REL, SLL)
-ZMK_CONDITIONAL_LAYER(LWL HSL, FSL)
-ZMK_CONDITIONAL_LAYER(SSL SUL, BHL)
-ZMK_CONDITIONAL_LAYER(SDL HSL, WHL)
-ZMK_CONDITIONAL_LAYER(SSL HSL, WPL)
+ZMK_CONDITIONAL_LAYER(6 7, 10) // spacedown + spaceup = realspace
+ZMK_CONDITIONAL_LAYER(8 9, 11) // lower + raise = adjust
+ZMK_CONDITIONAL_LAYER(6 8, 12) // spacedown + lower = subspace
+ZMK_CONDITIONAL_LAYER(7 9, 13) // spaceup + raise = hyperspace
+ZMK_CONDITIONAL_LAYER(6 9, 14) // spacedown + raise = knownspace
+ZMK_CONDITIONAL_LAYER(8 7, 15) // lower + spaceup = cyberspace
+ZMK_CONDITIONAL_LAYER(12 9, 16) // subspace + raise = slipspace
+ZMK_CONDITIONAL_LAYER(8 13, 17) // lower + hyperspace = foldspace
+ZMK_CONDITIONAL_LAYER(12 7, 18) // subspace + spaceup = blackhole
+ZMK_CONDITIONAL_LAYER(6 13, 19) // spacedown + hyperspace = whitehole
+ZMK_CONDITIONAL_LAYER(12 13, 20) // subspace + hyperspace = warp
 
 ZMK_LAYER(default,
 //    ┌───────────────┬───────┬───────┬──────────┬───────────────┬──────────────┬─────────────┬───────────────┬───────────┬─────────┬──────────┬───────────┐
