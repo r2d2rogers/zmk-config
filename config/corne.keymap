@@ -49,6 +49,7 @@ led_strip: ws2812@0 {
 };
 &lt {
   quick-tap-ms = <180>;
+  tapping-term-ms = <200>;
   flavor = "balanced";
 };
 
