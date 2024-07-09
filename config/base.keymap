@@ -37,13 +37,13 @@
 #define WHL 19
 #define WPL 20
 
-// #define DEF 0
-// #define NAV 1
-// #define FN 2
-// #define NUM 3
-// #define SYS 4
-// #define UC 5
-// #define MOUSE 6
+#define DEF 0
+#define NAV 15
+#define FN 16
+#define NUM 17
+#define SYS 18
+#define UC 19
+#define MOUSE 20
 
 #include "combos.dtsi"  // requires layer aliases
 #include "mouse.dtsi"
