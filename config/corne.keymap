@@ -7,6 +7,8 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#define CONFIG_WIRELESS 1
+
 #if CONFIG_WIRELESS
   #include <dt-bindings/zmk/bt.h>
   #define _BT_SEL_KEYS_ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7 &bt BT_SEL 8 &bt BT_SEL 9
