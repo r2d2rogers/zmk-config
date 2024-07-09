@@ -4,10 +4,16 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include "behaviors.dtsi"
-#include "dt-bindings/zmk/keys.h"
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
 
-#include "dt-bindings/zmk/bt.h"
+#if CONFIG_WIRELESS
+  #include <dt-bindings/zmk/bt.h>
+  #define _BT_SEL_KEYS_ &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_SEL 5 &bt BT_SEL 6 &bt BT_SEL 7 &bt BT_SEL 8 &bt BT_SEL 9
+#else
+  #define _BT_SEL_KEYS_ &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &trans
+#endif
+
 #include "dt-bindings/zmk/mouse.h"
 #include "dt-bindings/zmk/outputs.h"
 #include "dt-bindings/zmk/ext_power.h"
@@ -36,7 +42,10 @@
 #define FSL 17
 #define BHL 18
 #define WHL 19
-#define WPL 20
+#define WPL 2
+
+#define XXX &none
+#define ___ &trans
 
 &spi3 {
   led_strip: ws2812@0 {

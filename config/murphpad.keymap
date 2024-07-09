@@ -75,12 +75,19 @@
          default_layer {
              display-name = "default layer";
              bindings = <
-                 &kp N1           &kp TAB      &kp F5         &kp LC(LA(C))    &kp LG(D)
-                 &kp N2           &kp ESC      &kp KP_DIVIDE  &kp KP_MULTIPLY  &kp KP_MINUS
-                 &kp N3           &kp KP_N7    &kp KP_N8      &kp KP_N9        &kp KP_PLUS
-                 &kp C_MUTE       &kp KP_N4    &kp KP_N5      &kp KP_N6        &kp KP_ENTER
-                 &mo _RE          &kp KP_N1    &kp KP_N2      &kp KP_N3        &kp KP_ENTER
-                 &mo _LW          &kp KP_N0    &kp KP_N0      &kp KP_DOT       &kp C_PP
+//           ┌────────────┬────────────┬───────────────┬─────────────────┬──────────────┐
+               &kp N1       &kp C_MUTE   &kp C_VOL_DN    &kp C_VOL_UP      &kp C_PP
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &kp N2       &kp KP_NUM   &kp KP_DIVIDE   &kp KP_MULTIPLY   &kp KP_MINUS
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &kp N3       &kp KP_N7    &kp KP_N8       &kp KP_N9         &kp KP_PLUS
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &kp C_MUTE   &kp KP_N4    &kp KP_N5       &kp KP_N6         &kp KP_PLUS
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &mo _RE      &kp KP_N1    &kp KP_N2       &kp KP_N3         &kp KP_ENTER
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &mo _LW      &kp KP_N0    &kp KP_N0       &kp KP_DOT        &kp KP_ENTER
+//           └────────────┴────────────┴───────────────┴─────────────────┴──────────────┘
                  >;
              sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
 
