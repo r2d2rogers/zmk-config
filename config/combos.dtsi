@@ -45,7 +45,7 @@ ZMK_COMBO(rbkt,  &kp RBKT,      RB2 RB3,     DFL     FSL, COMBO_TERM_FAST, COMBO
 ZMK_COMBO(lbrc,  &kp LBRC,      RB1 RB2,         CSL    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rbrc,  &kp RBRC,      RB2 RB3,         CSL    , COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
-ZMK_COMBO(grk,   &sl UC,        RT1 RT3,     DFL CSL FSL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+ZMK_COMBO(grk,   &sl WHL,        RT1 RT3,     DFL CSL FSL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(cpgrk, &sls 0,        RT1 RT2 RT3, DFL CSL FSL, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Vertical combos - left hand */
