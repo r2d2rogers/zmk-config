@@ -255,20 +255,20 @@ ZMK_MACRO(win_sleep,
         conditional_layers { \
             compatible = "zmk,conditional-layers"; \
 
-ZMK_CONDITIONAL_LAYER(realspace, SDL SUL, RSL) // spacedown + spaceup = realspace
-ZMK_CONDITIONAL_LAYER(adjust, LWL REL, AJL) // lower + raise = adjust
-ZMK_CONDITIONAL_LAYER(subspace, SDL LWL, SSL) // spacedown + lower = subspace
-ZMK_CONDITIONAL_LAYER(hyperspace, SUL REL, HSL) // spaceup + raise = hyperspace
-ZMK_CONDITIONAL_LAYER(knownspace, SDL REL, KSL) // spacedown + raise = knownspace
-ZMK_CONDITIONAL_LAYER(cyberspace, LWL SUL, CSL) // lower + spaceup = cyberspace
+ZMK_CONDITIONAL_LAYER(realspace_layer, SDL SUL, RSL) // spacedown + spaceup = realspace
+ZMK_CONDITIONAL_LAYER(adjust_layer, LWL REL, AJL) // lower + raise = adjust
+ZMK_CONDITIONAL_LAYER(subspace_layer, SDL LWL, SSL) // spacedown + lower = subspace
+ZMK_CONDITIONAL_LAYER(hyperspace_layer, SUL REL, HSL) // spaceup + raise = hyperspace
+ZMK_CONDITIONAL_LAYER(knownspace_layer, SDL REL, KSL) // spacedown + raise = knownspace
+ZMK_CONDITIONAL_LAYER(cyberspace_layer, LWL SUL, CSL) // lower + spaceup = cyberspace
 
-ZMK_CONDITIONAL_LAYER(slipspace, SSL REL, SLL) // subspace + raise = slipspace
-ZMK_CONDITIONAL_LAYER(foldspace, LWL HSL, FSL) // lower + hyperspace = foldspace
-ZMK_CONDITIONAL_LAYER(blackhole, SSL SUL, BHL) // subspace + spaceup = blackhole
-ZMK_CONDITIONAL_LAYER(whitehole, SDL HSL, WHL) // spacedown + hyperspace = whitehole
-ZMK_CONDITIONAL_LAYER(warp, SSL HSL, WPL) // subspace + hyperspace = warp
+ZMK_CONDITIONAL_LAYER(slipspace_layer, SSL REL, SLL) // subspace + raise = slipspace
+ZMK_CONDITIONAL_LAYER(foldspace_layer, LWL HSL, FSL) // lower + hyperspace = foldspace
+ZMK_CONDITIONAL_LAYER(blackhole_layer, SSL SUL, BHL) // subspace + spaceup = blackhole
+ZMK_CONDITIONAL_LAYER(whitehole_layer, SDL HSL, WHL) // spacedown + hyperspace = whitehole
+ZMK_CONDITIONAL_LAYER(warp_layer, SSL HSL, WPL) // subspace + hyperspace = warp
 
-ZMK_CONDITIONAL_LAYER(sys, FN NUM, SYS)  // FN + NUM --> SYS
+ZMK_CONDITIONAL_LAYER(sys_layer, FN NUM, SYS)  // FN + NUM --> SYS
         }; \
     };
 
