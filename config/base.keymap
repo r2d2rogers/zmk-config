@@ -244,16 +244,16 @@ ZMK_MACRO(win_sleep,
 /* Keymap */
 
 ZMK_CONDITIONAL_LAYER(SDL SUL, RSL) // spacedown + spaceup = realspace
-ZMK_CONDITIONAL_LAYER(LWL REL, AJL) // lower + raise = adjust
+// ZMK_CONDITIONAL_LAYER(LWL REL, AJL) // lower + raise = adjust
 ZMK_CONDITIONAL_LAYER(SDL LWL, SSL) // spacedown + lower = subspace
-ZMK_CONDITIONAL_LAYER(SUL REL, HSL) // spaceup + raise = hyperspace
-ZMK_CONDITIONAL_LAYER(SDL REL, KSL) // spacedown + raise = knownspace
-ZMK_CONDITIONAL_LAYER(LWL SUL, CSL) // lower + spaceup = cyberspace
-ZMK_CONDITIONAL_LAYER(SSL REL, SLL) // subspace + raise = slipspace
-ZMK_CONDITIONAL_LAYER(LWL HSL, FSL) // lower + hyperspace = foldspace
-ZMK_CONDITIONAL_LAYER(SSL SUL, BHL) // subspace + spaceup = blackhole
-ZMK_CONDITIONAL_LAYER(SDL HSL, WHL) // spacedown + hyperspace = whitehole
-ZMK_CONDITIONAL_LAYER(SSL HSL, WPL) // subspace + hyperspace = warp
+// ZMK_CONDITIONAL_LAYER(SUL REL, HSL) // spaceup + raise = hyperspace
+// ZMK_CONDITIONAL_LAYER(SDL REL, KSL) // spacedown + raise = knownspace
+// ZMK_CONDITIONAL_LAYER(LWL SUL, CSL) // lower + spaceup = cyberspace
+// ZMK_CONDITIONAL_LAYER(SSL REL, SLL) // subspace + raise = slipspace
+// ZMK_CONDITIONAL_LAYER(LWL HSL, FSL) // lower + hyperspace = foldspace
+// ZMK_CONDITIONAL_LAYER(SSL SUL, BHL) // subspace + spaceup = blackhole
+// ZMK_CONDITIONAL_LAYER(SDL HSL, WHL) // spacedown + hyperspace = whitehole
+// ZMK_CONDITIONAL_LAYER(SSL HSL, WPL) // subspace + hyperspace = warp
 
 // ZMK_CONDITIONAL_LAYER(FN NUM, SYS)  // FN + NUM --> SYS
 
