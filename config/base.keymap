@@ -242,7 +242,7 @@ ZMK_MACRO(win_sleep,
 #define VOL_DOWN    &hmr RSHFT C_VOL_DN
 
 #define ZMK_CONDITIONAL_LAYER(if_name, if_layers, then_layer) \
-            if_name: if_name { \
+            if_name { \
                 if-layers = <if_layers>; \
                 then-layer = <then_layer>; \
             };
@@ -252,7 +252,7 @@ ZMK_MACRO(win_sleep,
 
 // #define ZMK_CONDITIONAL_LAYERS() \
 / {
-  conditional_layers {
+  / conditional_layers {
     compatible = "zmk,conditional-layers";
 
  ZMK_CONDITIONAL_LAYER(realspace_layer, SDL SUL, RSL) // spacedown + spaceup = realspace
