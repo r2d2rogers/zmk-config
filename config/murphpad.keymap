@@ -96,12 +96,19 @@
          alternate_layer {
              display-name = "alternate";
              bindings = <
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
+//           ┌────────────┬────────────┬───────────────┬─────────────────┬──────────────┐
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           └────────────┴────────────┴───────────────┴─────────────────┴──────────────┘
                  >;
              sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
@@ -110,12 +117,19 @@
          lower_layer {
              display-name = "lower";
              bindings = <
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
+//           ┌────────────┬────────────┬───────────────┬─────────────────┬──────────────┐
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           └────────────┴────────────┴───────────────┴─────────────────┴──────────────┘
                  >;
              sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
@@ -124,12 +138,19 @@
          raise_layer {
              display-name = "raise";
              bindings = <
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
-                 &trans           &trans       &trans        &trans        &trans
+//           ┌────────────┬────────────┬───────────────┬─────────────────┬──────────────┐
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           ├────────────┼────────────┼───────────────┼─────────────────┼──────────────┤
+               &trans       &trans       &trans          &trans            &trans
+//           └────────────┴────────────┴───────────────┴─────────────────┴──────────────┘
                  >;
              sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
@@ -138,12 +159,19 @@
          adjust_layer {
              display-name = "adjust";
              bindings = <
-                 &trans           &rgb_ug RGB_EFF &out OUT_USB &out OUT_BLE  &out OUT_TOG
-                 &trans           &trans          &trans       &trans        &bt BT_CLR
-                 &trans           &bt BT_SEL 7    &bt BT_SEL 8 &bt BT_SEL 9  &trans
-                 &tog _AL         &bt BT_SEL 4    &bt BT_SEL 5 &bt BT_SEL 6  &trans
-                 &trans           &bt BT_SEL 1    &bt BT_SEL 2 &bt BT_SEL 3  &trans
-                 &trans           &bt BT_SEL 0    &trans       &trans        &out OUT_TOG
+//           ┌────────────┬─────────────────┬──────────────┬──────────────┬──────────────┐
+               &trans       &rgb_ug RGB_EFF   &out OUT_USB   &out OUT_BLE   &out OUT_TOG
+//           ├────────────┼─────────────────┼──────────────┼──────────────┼──────────────┤
+               &trans       &trans            &trans         &trans         &bt BT_CLR
+//           ├────────────┼─────────────────┼──────────────┼──────────────┼──────────────┤
+               &trans       &bt BT_SEL 7      &bt BT_SEL 8   &bt BT_SEL 9   &trans
+//           ├────────────┼─────────────────┼──────────────┼──────────────┼──────────────┤
+               &tog _AL     &bt BT_SEL 4      &bt BT_SEL 5   &bt BT_SEL 6   &trans
+//           ├────────────┼─────────────────┼──────────────┼──────────────┼──────────────┤
+               &trans       &bt BT_SEL 1      &bt BT_SEL 2   &bt BT_SEL 3   &trans
+//           ├────────────┼─────────────────┼──────────────┼──────────────┼──────────────┤
+               &trans       &bt BT_SEL 0      &trans         &trans         &out OUT_TOG
+//           └────────────┴─────────────────┴──────────────┴──────────────┴──────────────┘
                  >;
              sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp C_VOL_UP C_VOL_DN>;
 
