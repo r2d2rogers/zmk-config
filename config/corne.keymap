@@ -11,6 +11,6 @@
   };
 };
 
-#define CONFIG_WIRELESS 1
+#define CONFIG_WIRELESS
 
 #include "base.keymap"
